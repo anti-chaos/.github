@@ -27,10 +27,7 @@ exclude:
   - bower.json
   - package.json
   - package-lock.json
-  - README.md
-  - README.zh-CN.md
   - CNAME
-  # - README.md
 encoding: utf-8
 
 # Plugins
