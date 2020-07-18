@@ -1,0 +1,18 @@
+---
+title: 指导
+permalink: /guides/
+layout: page
+body-class:
+banner:
+  url: banners/teamwork
+image: banners/teamwork
+comments: false
+---
+
+{% for type in site.data.guides %}
+  <h2>{{ type.title }}</h2>
+  {% for item in type.items %}
+    <h3><a href="/guides/{{ item.id }}/">{{ item.title }}</a></h3>
+    {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+  {% endfor %}
+{% endfor %}

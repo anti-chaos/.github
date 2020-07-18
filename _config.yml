@@ -89,11 +89,18 @@ defaults:
       path: ""
       type: guides
     values:
-      layout: page
+      layout: post
       css:
-        - pages/entry
-      body-class:
-        - Page--entry
+        - pages/post
+      js:
+        - initializers/time
+        - initializers/lazyload
+      author:
+        name: 欧雷
+        email: ourairyu@gmail.com
+        uri: https://ourai.ws/
+        slug: ourai
+        twitter: ourairyu
       comments: true
   # 项目
   - scope:
