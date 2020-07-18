@@ -1,5 +1,21 @@
 ---
+layout: default
+css:
+  - pages/index
 permalink: index.html
 ---
 
-<p>让前端开发更加有序，让业务开发专注业务。</p>
+{% include header.html %}
+<main class="Page-content">
+  <header class="Homepage-header">
+    <div>
+      <h1 class="Homepage-title">Anti-chaos</h1>
+      <p class="Homepage-slogan">让前端开发更加有序，<br>让业务开发专注业务。</p>
+    </div>
+    <figure class="sr-only">
+      <img src="{{ 'banners/anti-chaos' | asset_path }}" alt="Anti-chaos">
+      <figcaption>Anti-chaos</figcaption>
+    </figure>
+</header>
+</main>
+{% include footer.html %}

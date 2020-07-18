@@ -5,8 +5,6 @@ banner:
 image: banners/javascript-style-guide
 ---
 
-看到文章的标题，你也许会问：什么是「元编程」？它跟人生有什么关系？
-
 ## 命名
 
 根据不同场景，会用到小驼峰式（lowerCamelCase）、大驼峰式（UpperCamelCase）和大蛇式（UPPER_SNAKE_CASE）。
