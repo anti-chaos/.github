@@ -1,5 +1,5 @@
 ---
-title: 指引
+title: 指导
 permalink: /guides/
 layout: page
 body-class:

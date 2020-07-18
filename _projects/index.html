@@ -1,0 +1,9 @@
+---
+title: 项目
+permalink: /projects/
+---
+
+{% for item in site.data.projects %}
+  <h2><a href="/projects/{{ item.id }}/">{{ item.title }}</a></h2>
+  {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+{% endfor %}
