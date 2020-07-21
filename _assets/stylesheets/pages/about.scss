@@ -1,0 +1,55 @@
+@import "../helper";
+
+.MemberList {
+  margin-bottom: 0;
+  padding-left: 0;
+  overflow: hidden;
+
+  &-item {
+    float: left;
+    width: 20%;
+    list-style: none inside none;
+  }
+}
+
+.TeamMember {
+  &-avatar {
+    position: relative;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    overflow: hidden;
+
+    &,
+    img {
+      display: block;
+    }
+
+    img {
+      max-width: 100% !important;
+    }
+
+    &:after {
+      content: "\0020";
+      background-color: #000;
+      opacity: 0;
+      @include stretch;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &:after {
+        opacity: .5;
+      }
+    }
+  }
+
+  &-brief {
+    margin-top: 8px;
+    font-size: 16px !important;
+
+    a {
+      font-weight: bold;
+    }
+  }
+}
