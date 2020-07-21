@@ -10,6 +10,12 @@
     width: 20%;
     list-style: none inside none;
   }
+
+  @media all and (max-width: $screen-sm-max) {
+    &-item {
+      width: 33.33333%;
+    }
+  }
 }
 
 .TeamMember {
