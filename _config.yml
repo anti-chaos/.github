@@ -7,9 +7,9 @@ collections:
   pages:
     output: true
     permalink: /:path/
-  guides:
+  learn:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:path/
   projects:
     output: true
     permalink: /:collection/:path/
@@ -87,7 +87,7 @@ defaults:
   # 指南
   - scope:
       path: ""
-      type: guides
+      type: learn
     values:
       layout: post
       css:
