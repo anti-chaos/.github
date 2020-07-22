@@ -3,4 +3,4 @@
   items:
     - title: 代码风格
       description: 规范代码。
-      id: style
+      id: coding-style

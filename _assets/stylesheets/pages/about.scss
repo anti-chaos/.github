@@ -70,8 +70,9 @@
   }
 
   &--joinUs &-avatar {
+    border: 1px dashed #ccc;
     background-color: #f6f6f6;
-    @include aspect_ratio(33.33333%, 33.33333%);
+    @include aspect_ratio(100%, 100%);
 
     span {
       text-align: center;

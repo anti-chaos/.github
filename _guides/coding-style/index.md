@@ -1,10 +1,12 @@
 ---
 title: 代码风格
-permalink: /guides/style/
+permalink: /guides/coding-style/
 banner:
   url: banners/code
 image: banners/code
 ---
+
+风格一致的代码，看起来像是一个人写的。
 
 ## 总则
 
@@ -26,7 +28,12 @@ image: banners/code
 
 ## 细则
 
-具体的请见：
+各语言的具体请见：
 
-- [HTML & CSS 风格指南](/guides/style/html-and-css/)
-- [JavaScript 风格指南](/guides/style/javascript/)
+- [HTML & CSS 风格指南](/guides/coding-style/html-and-css/)
+- [JavaScript 风格指南](/guides/coding-style/javascript/)
+
+某个视图层库/框架相关的请看：
+
+- [Angular](https://angular.io/guide/styleguide){:target="_blank"}{:rel="external nofollow"}
+- [Vue](https://vuejs.org/v2/style-guide/){:target="_blank"}{:rel="external nofollow"}
