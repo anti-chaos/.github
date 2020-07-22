@@ -84,7 +84,7 @@ defaults:
         slug: ourai
         twitter: ourairyu
       siblings: true
-  # 指导
+  # 指南
   - scope:
       path: ""
       type: guides

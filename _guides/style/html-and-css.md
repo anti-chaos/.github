@@ -1,5 +1,5 @@
 ---
-title: HTML & CSS 风格指导
+title: HTML & CSS 风格指南
 banner:
   url: banners/html-and-css-style-guide
 image: banners/html-and-css-style-guide

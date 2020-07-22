@@ -28,5 +28,5 @@ image: banners/code
 
 具体的请见：
 
-- [HTML & CSS 风格指导](/guides/style/html-and-css/)
-- [JavaScript 风格指导](/guides/style/javascript/)
+- [HTML & CSS 风格指南](/guides/style/html-and-css/)
+- [JavaScript 风格指南](/guides/style/javascript/)

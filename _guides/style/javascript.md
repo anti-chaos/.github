@@ -1,5 +1,5 @@
 ---
-title: JavaScript 风格指导
+title: JavaScript 风格指南
 banner:
   url: banners/javascript-style-guide
 image: banners/javascript-style-guide
