@@ -1,6 +1,6 @@
-# Anti-chaos
-
 English | [简体中文](./README.zh-CN.md)
+
+# Anti-chaos
 
 ## Hello,
 
