@@ -21,3 +21,4 @@ image: banners/html-and-css-style-guide
 
 - [Principles of writing consistent, idiomatic HTML](https://github.com/necolas/idiomatic-html){:target="_blank"}{:rel="external nofollow"}
 - [Principles of writing consistent, idiomatic CSS](https://github.com/necolas/idiomatic-css){:target="_blank"}{:rel="external nofollow"}
+- [Code Guide](https://codeguide.co/){:target="_blank"}{:rel="external nofollow"}
