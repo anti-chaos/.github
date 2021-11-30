@@ -10,10 +10,10 @@ end
 
 desc "部署"
 task :deploy do
-  dir = "../.tmp/anti-chaos"
+  dir = "../../.tmp/anti-chaos"
 
-  unless FileTest.directory?("../.tmp")
-    system "mkdir ../.tmp"
+  unless FileTest.directory?("../../.tmp")
+    system "mkdir ../../.tmp"
   end
 
   unless FileTest.directory?(dir)
