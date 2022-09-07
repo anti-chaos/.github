@@ -6,21 +6,21 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf .asset-cache",
-    "serve": "rake run",
+    "start": "rake run",
     "predeploy": "npm run clean",
     "deploy": "rake deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anti-chaos/website.git"
+    "url": "git+https://github.com/anti-chaos/.github.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/anti-chaos/website/issues"
+    "url": "https://github.com/anti-chaos/.github/issues"
   },
-  "homepage": "https://github.com/anti-chaos/website#readme",
+  "homepage": "https://ntks.ourai.ws/",
   "devDependencies": {
     "handie": "^1.0.8"
   }

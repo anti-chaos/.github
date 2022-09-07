@@ -13,3 +13,8 @@ comments: false
     {% if item.description %}<p>{{ item.description }}</p>{% endif %}
   {% endfor %}
 {% endfor %}
+
+{% contentfor footer %}
+  {% include widgets/social.html %}
+  {% include widgets/toc.html %}
+{% endcontentfor %}
