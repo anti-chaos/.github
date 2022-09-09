@@ -21,7 +21,7 @@ task :deploy do
 
     cd dir do
       system "git init"
-      system "git remote add origin https://github.com/anti-chaos/website.git"
+      system "git remote add origin https://github.com/anti-chaos/.github.git"
       system "git fetch"
       system "git checkout gh-pages"
     end

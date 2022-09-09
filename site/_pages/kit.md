@@ -16,13 +16,13 @@ title: 开发套件
 | [`@ntks/event-emitter`](https://www.npmjs.com/package/@ntks/event-emitter){:target="_blank"}{:rel="external nofollow"} | 简易的事件触发器 |
 {:.table.table-bordered}
 
-## Fxxk Design
+## [Fxxk Design](https://fxxk.design/){:target="_blank"}{:rel="external nofollow"}
 
 以「设计即代码」为目标的跨 JS-based 技术栈、跨平台 GUI 开发体系：
 
 | 子体系/模块 | 说明 |
 | --- | --- |
-| [Petals](https://oss.ourai.ws/petals/){:target="_blank"}{:rel="external nofollow"} | 原子化的 UI 组件基础设施，包括[风格组件](https://ourai.ws/posts/the-system-of-frontend-ui-components/#section-1){:target="_blank"}{:rel="external nofollow"}、[视觉组件](https://ourai.ws/posts/the-system-of-frontend-ui-components/#section-2){:target="_blank"}{:rel="external nofollow"}和[无头组件](https://ourai.ws/posts/the-system-of-frontend-ui-components/#section-3){:target="_blank"}{:rel="external nofollow"} |
+| [Petals](https://petals.fxxk.design/){:target="_blank"}{:rel="external nofollow"} | 原子化的 UI 组件基础设施，包括[风格组件](https://ourai.ws/posts/the-system-of-frontend-ui-components/#section-1){:target="_blank"}{:rel="external nofollow"}、[视觉组件](https://ourai.ws/posts/the-system-of-frontend-ui-components/#section-2){:target="_blank"}{:rel="external nofollow"}和[无头组件](https://ourai.ws/posts/the-system-of-frontend-ui-components/#section-3){:target="_blank"}{:rel="external nofollow"} |
 | [Kokiri](https://github.com/kokiri-ui){:target="_blank"}{:rel="external nofollow"} | 与 Vue 绑定的[结构组件](https://ourai.ws/posts/the-system-of-frontend-ui-components/#section-4){:target="_blank"}{:rel="external nofollow"}，提供部分既有 UI 组件库的适配包 |
 | [Zora](https://github.com/zora-ui){:target="_blank"}{:rel="external nofollow"} | 与 React 绑定的[结构组件](https://ourai.ws/posts/the-system-of-frontend-ui-components/#section-4){:target="_blank"}{:rel="external nofollow"}，提供部分既有 UI 组件库的适配包 |
 {:.table.table-bordered}
