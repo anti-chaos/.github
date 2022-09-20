@@ -34,7 +34,7 @@ title: 开发套件
 | 子体系/模块 | 说明 |
 | --- | --- |
 | [Organik](https://github.com/ourai/organik){:target="_blank"}{:rel="external nofollow"} | 元数据逻辑引擎，用来收集元数据并生成上下文 |
-| [Handie](https://www.yuque.com/handie){:target="_blank"}{:rel="external nofollow"} | 渐进式配置驱动企业级中后台前端应用开发框架 |
+| [Handie](https://handiejs.github.io/){:target="_blank"}{:rel="external nofollow"} | 渐进式配置驱动企业级中后台前端应用开发框架 |
 {:.table.table-bordered}
 
 {% contentfor footer %}
