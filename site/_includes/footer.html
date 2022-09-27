@@ -2,13 +2,12 @@
 {% assign start_year = "2018" %}
 {% assign current_year = site.time | date: "%Y" %}
 <footer class="Page-footer Footer">
-  <div class="container">
+  <div class="{% if site.data.repos[page.repo] %}container-fluid{% else %}container{% endif %}">
     <div class="Footer-description">
       <!-- 重要链接 -->
       <nav class="Footer-navs">
         <ul>
-          <li><a href="/about/"><span>关于</span></a></li>
-          <li><a href="/join/"><span>招募</span></a></li>
+          <li><a href="https://fes.ourai.ws/" target="_blank" rel="external nofollow"><span>FES</span></a></li>
           <li><a href="https://github.com/anti-chaos" target="_blank" rel="external nofollow"><span>GitHub</span></a></li>
         </ul>
       </nav>

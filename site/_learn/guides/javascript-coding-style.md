@@ -1,8 +1,8 @@
 ---
 title: JavaScript 风格指南
-banner:
-  url: banners/javascript-style-guide
-image: banners/javascript-style-guide
+# banner:
+#   url: banners/javascript-style-guide
+# image: banners/javascript-style-guide
 ---
 
 ## 命名

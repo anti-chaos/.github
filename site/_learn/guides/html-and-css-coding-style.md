@@ -1,8 +1,8 @@
 ---
 title: HTML & CSS 风格指南
-banner:
-  url: banners/html-and-css-style-guide
-image: banners/html-and-css-style-guide
+# banner:
+#   url: banners/html-and-css-style-guide
+# image: banners/html-and-css-style-guide
 ---
 
 ## 命名

@@ -102,6 +102,18 @@ defaults:
         slug: ourai
         twitter: ourairyu
       comments: true
+  - scope:
+      path: "guides"
+      type: learn
+    values:
+      layout: guide
+      css:
+        - pages/post
+        - pages/doc
+      js:
+        - initializers/time
+        - initializers/lazyload
+      repo: cookbook
   # 项目
   - scope:
       path: ""

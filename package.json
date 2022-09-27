@@ -5,10 +5,10 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf .asset-cache",
-    "start": "rake run",
+    "clean": "rm -rf ./site/.asset-cache",
+    "start": "cd ./site && rake run",
     "predeploy": "npm run clean",
-    "deploy": "rake deploy",
+    "deploy": "cd ./site && rake deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

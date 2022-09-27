@@ -1,9 +1,9 @@
 ---
 title: 代码风格
-permalink: /guides/coding-style/
-banner:
-  url: banners/code
-image: banners/code
+# permalink: /guides/coding-style/
+# banner:
+#   url: banners/code
+# image: banners/code
 ---
 
 风格一致的代码，看起来像是一个人写的。

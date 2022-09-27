@@ -10,8 +10,8 @@ title: 开发套件
 
 | NPM 包 | 说明 |
 | --- | --- |
-| [`@ntks/stylelint-config`](https://www.npmjs.com/package/@ntks/stylelint-config){:target="_blank"}{:rel="external nofollow"} | 符合[推荐的 CSS/Sass 风格](/guides/coding-style/html-and-css/)的 Stylelint 配置 |
-| [`@ntks/eslint-config`](https://www.npmjs.com/package/@ntks/eslint-config){:target="_blank"}{:rel="external nofollow"} | 符合[推荐的 JavaScript/TypeScript 风格](/guides/coding-style/javascript/)的 ESLint 配置 |
+| [`@ntks/stylelint-config`](https://www.npmjs.com/package/@ntks/stylelint-config){:target="_blank"}{:rel="external nofollow"} | 符合[推荐的 CSS/Sass 风格](/guides/html-and-css-coding-style/)的 Stylelint 配置 |
+| [`@ntks/eslint-config`](https://www.npmjs.com/package/@ntks/eslint-config){:target="_blank"}{:rel="external nofollow"} | 符合[推荐的 JavaScript/TypeScript 风格](/guides/javascript-coding-style/)的 ESLint 配置 |
 | [`@ntks/toolbox`](https://www.npmjs.com/package/@ntks/toolbox){:target="_blank"}{:rel="external nofollow"} | 日常开发工具包，可用 API 详见[使用手册](/projects/toolbox/) |
 | [`@ntks/event-emitter`](https://www.npmjs.com/package/@ntks/event-emitter){:target="_blank"}{:rel="external nofollow"} | 简易的事件触发器 |
 {:.table.table-bordered}
