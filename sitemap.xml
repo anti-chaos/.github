@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://ntks.ourai.ws/about/</loc>
+<loc>https://ntks.ourai.ws/guides/</loc>
 </url>
 <url>
 <loc>https://ntks.ourai.ws/</loc>
@@ -13,16 +13,16 @@
 <loc>https://ntks.ourai.ws/kit/</loc>
 </url>
 <url>
-<loc>https://ntks.ourai.ws/guides/coding-style/html-and-css/</loc>
+<loc>https://ntks.ourai.ws/team/</loc>
 </url>
 <url>
 <loc>https://ntks.ourai.ws/guides/coding-style/</loc>
 </url>
 <url>
-<loc>https://ntks.ourai.ws/guides/coding-style/javascript/</loc>
+<loc>https://ntks.ourai.ws/guides/html-and-css-coding-style/</loc>
 </url>
 <url>
-<loc>https://ntks.ourai.ws/guides/</loc>
+<loc>https://ntks.ourai.ws/guides/javascript-coding-style/</loc>
 </url>
 <url>
 <loc>https://ntks.ourai.ws/guides/search-engine-optimization/</loc>
