@@ -30,8 +30,8 @@ title: 代码风格
 
 各语言的具体请见：
 
-- [HTML & CSS 风格指南](/guides/coding-style/html-and-css/)
-- [JavaScript 风格指南](/guides/coding-style/javascript/)
+- [HTML & CSS 风格指南](/guides/html-and-css-coding-style/)
+- [JavaScript 风格指南](/guides/javascript-coding-style/)
 
 某个视图层库/框架相关的请看：
 
