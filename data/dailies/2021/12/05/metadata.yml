@@ -1,6 +1,7 @@
 title: 业务中的前端组件化体系
 description: >-
   在业务开发过程中，我们总是会期望某些功能一定程度的复用。很基础的那些元素，比如按钮，输入框，它们的使用方式都已经被大部分人熟知，但是一旦某块功能复杂起来，成为一种“业务组件”的时候，就会陷入一些很奇怪的境况，最初是期望抽出来的这块组件能有比较好的复用性，但是，可能当另外一个业务想要复用它的时候，往往遇到很多问题。【另附《[聊聊中后台前端应用：业务中的组件体系](https://ourai.ws/posts/the-system-of-ui-components-in-frontend-projects/)》】
-date: '2021-12-05 00:00:00 +0800'
+date: 2021-12-05 07:39:28 +0800
 origin:
-  url: 'https://zhuanlan.zhihu.com/p/383129585'
+  url: https://zhuanlan.zhihu.com/p/383129585
+  author: xufei

@@ -1,6 +1,7 @@
-const { generateDailies } = require('../generator');
+const { generateAuthors, generateDailies } = require('../generator');
 
 const generators = {
+  author: generateAuthors,
   daily: generateDailies,
 };
 

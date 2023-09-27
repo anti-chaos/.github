@@ -1,1 +1,1 @@
-module.exports = { ...require('./daily') };
+module.exports = { ...require('./author'), ...require('./daily') };

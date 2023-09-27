@@ -1,0 +1,6 @@
+title: 可逆计算原理和Nop平台介绍及答疑
+description: Nop Platform 2.0是基于可逆计算原理从零开始构建的新一代开源低代码平台，它致力于克服低代码平台无法摆脱穷举法的困境，从理论层面超越组件技术，有效的解决粗粒度软件复用的问题。借助于DSL，Nop平台可以直接与GPT对话，成为AI驱动的低代码平台。本视频介绍了可逆计算的基本原理和Nop平台基本操作演示，最后演示了通过Nop平台内置的DSL与GPT进行交互直接驱动生成应用的过程。
+date: 2023-03-22 08:11:41 +0800
+origin:
+  url: https://zhuanlan.zhihu.com/p/615136248
+  author: canonical

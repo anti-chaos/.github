@@ -2,6 +2,7 @@ title: 聊聊前端 UI 组件：组件特征
 description: >-
   本文从前端 UI 组件的构成、分类及组件间的继承关系等角度出发，通过分析组件的特征来探讨建立一个组件体系所需要关注的一些点。其中，UI
   组件各构成元素的易变性是最应该被关注的，它会对组件体系的可复用性、可扩展性等产生很大影响。
-date: '2021-12-06 00:00:00 +0800'
+date: 2021-12-06 08:31:00 +0800
 origin:
-  url: 'https://ourai.ws/posts/the-features-of-frontend-ui-components/'
+  url: https://ourai.ws/posts/the-features-of-frontend-ui-components/
+  author: ourai

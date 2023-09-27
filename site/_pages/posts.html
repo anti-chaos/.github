@@ -9,14 +9,16 @@ image: banners/anti-chaos
 ---
 
 <p>推荐一些符合「<a href="/guides/">反混沌</a>」理念的文章——</p>
+{% assign utm_flag = "?utm_source=ntks.ourai.ws&utm_medium=recommended" %}
 {% for item in site.data.dailies.items reversed %}
   {% assign daily = item[1] %}
+  {% assign author = site.data.people.items[daily.origin.author] %}
   <section class="Post">
     <header class="Post-header">
-      <h2 class="Post-title"><a href="{{ daily.origin.url }}?utm_source=ntks.ourai.ws&utm_medium=recommended" target="_blank" rel="external nofollow">{{ daily.title }}</a></h2>
+      <h2 class="Post-title"><a href="{{ daily.origin.url }}{{ utm_flag }}" target="_blank" rel="external nofollow">{{ daily.title }}</a></h2>
     </header>
     <div class="Post-body">{{ daily.description | markdownify }}</div>
-    <div class="Post-footer">{% if daily.origin.author %}<a class="Post-author" href="javascript:void(0);">{{ daily.origin.author }}</a>{% endif %}<time class="Post-date" datetime="{{ daily.date | date: '%F' }}"><i class="fa fa-calendar"></i><span>{{ daily.date | date: "%F" }}</span></time></div>
+    <div class="Post-footer">{% if author %}<a class="Post-author" href="{{ author.homepage }}{{ utm_flag }}" target="_blank" rel="external nofollow">{{ author.name }}</a>{% endif %}{% if daily.date %}<time class="Post-date" datetime="{{ daily.date | date_to_xmlschema }}"><i class="fa fa-calendar"></i><span>{{ daily.date | date: "%F" }}</span></time>{% endif %}</div>
   </section>
 {% endfor %}
 
