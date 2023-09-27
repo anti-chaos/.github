@@ -1,6 +1,5 @@
 ---
-title: 推荐阅读
-special_title: 文章
+title: 文章
 css:
   - pages/posts
 banner:
@@ -8,20 +7,24 @@ banner:
 image: banners/anti-chaos
 ---
 
-<p>推荐一些符合「<a href="/guides/">反混沌</a>」理念的文章——</p>
+<h2>推荐阅读</h2>
+<p>一些符合「<a href="/guides/">反混沌</a>」理念的文章——</p>
 {% assign utm_flag = "?utm_source=ntks.ourai.ws&utm_medium=recommended" %}
+{% assign site_banner = "banners/anti-chaos" %}
 {% for item in site.data.dailies.items reversed %}
   {% assign daily = item[1] %}
   {% assign author = site.data.people.items[daily.origin.author] %}
   <section class="Post">
+    <div class="Post-banner" style="background-image: url('{{ site_banner | asset_path }}');"></div>
     <header class="Post-header">
-      <h2 class="Post-title"><a href="{{ daily.origin.url }}{{ utm_flag }}" target="_blank" rel="external nofollow">{{ daily.title }}</a></h2>
+      <h3 class="Post-title" data-toc-skip="true"><a href="{{ daily.origin.url }}{{ utm_flag }}" target="_blank" rel="external nofollow">{{ daily.title }}</a></h3>
     </header>
-    <div class="Post-body">{{ daily.description | markdownify }}</div>
+    <div class="Post-body" title="{{ daily.description | markdownify | strip_html | strip_newlines | escape_once }}">{{ daily.description | markdownify }}</div>
     <div class="Post-footer">{% if author %}<a class="Post-author" href="{{ author.homepage }}{{ utm_flag }}" target="_blank" rel="external nofollow">{{ author.name }}</a>{% endif %}{% if daily.date %}<time class="Post-date" datetime="{{ daily.date | date_to_xmlschema }}"><i class="fa fa-calendar"></i><span>{{ daily.date | date: "%F" }}</span></time>{% endif %}</div>
   </section>
 {% endfor %}
 
 {% contentfor footer %}
   {% include widgets/social.html %}
+  {% include widgets/toc.html %}
 {% endcontentfor %}
