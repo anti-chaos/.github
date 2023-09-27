@@ -17,5 +17,27 @@ permalink: index.html
       <figcaption>Anti-chaos</figcaption>
     </figure>
   </header>
+  <div class="container">
+    <article class="Page-main Article">
+      <div class="Article-content">
+        <section>
+          <h2>推荐阅读</h2>
+          {% assign total = 0 %}
+          {% for item in site.data.dailies.items reversed %}
+            {% if total < 6 %}
+              {% assign total = total | plus: 1 %}
+              {% assign daily = item[1] %}
+              <div class="Post">
+                <h3 class="Post-title"><a href="{{ daily.origin.url }}?utm_source=ntks.ourai.ws&utm_medium=homepage" target="_blank" rel="external nofollow">{{ daily.title }}</a></h3>
+                <div class="Post-body">{{ daily.description | markdownify }}</div>
+                <div class="Post-footer">{% if daily.origin.author %}<a class="Post-author" href="javascript:void(0);">{{ daily.origin.author }}</a>{% endif %}<time class="Post-date" datetime="{{ daily.date | date: '%F' }}"><i class="fa fa-calendar"></i><span>{{ daily.date | date: "%F" }}</span></time></div>
+              </div>
+            {% endif %}
+          {% endfor %}
+          <p><a href="/posts/">查看更多 >></a></p>
+        </section>
+      </div>
+    </article>
+  </div>
 </main>
 {% include footer.html %}

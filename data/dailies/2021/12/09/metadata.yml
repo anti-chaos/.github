@@ -1,5 +1,6 @@
 title: 聊聊中后台前端应用：模块相关的一些事
 description: >-
   在《聊聊中后台前端应用：目录结构划分模式》中讲述了「野生」、「分层」和「模块化」这三种划分目录结构的模式，本文就在假定项目中已经采用内聚性相对最高的「模块化」模式进行目录结构划分的基础上，聊聊模块相关的一些事儿。
+date: '2021-12-09 00:00:00 +0800'
 origin:
   url: 'https://ourai.ws/posts/things-about-modules-in-frontend-projects/'

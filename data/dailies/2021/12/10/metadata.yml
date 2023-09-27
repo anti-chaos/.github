@@ -1,5 +1,6 @@
 title: 聊聊中后台前端应用：上下文的那些事儿
 description: >-
   经过《聊聊中后台前端应用：模块相关的一些事》和《聊聊中后台前端应用：业务中的组件体系》这两篇文章的铺垫，终于可以单独写一篇文章来专门讲讲「上下文」相关的事情了。
+date: '2021-12-10 00:00:00 +0800'
 origin:
   url: 'https://ourai.ws/posts/things-about-contexts-in-frontend-projects/'

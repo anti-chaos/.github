@@ -2,5 +2,6 @@ title: ESM Bundleless 在低代码场景的实践
 description: >-
   今天分享的标题包含了三个关键词：ESM，即 ES Module，当前浏览器标准的模块规范；Bundleless，对应传统的
   Bundle，即强调更少的打包；低代码，近两年火热的前端命题，相信大家都听说过、使用过、甚至开发过一个低代码平台，低代码的核心是借助可视化/配置的方式来提升应用的研发效率，这也是我所在的团队「云凤蝶」在努力做的方向。
+date: '2021-12-21 00:00:00 +0800'
 origin:
   url: 'https://mp.weixin.qq.com/s/jToFTRdQPUHak-wmycA3cA'

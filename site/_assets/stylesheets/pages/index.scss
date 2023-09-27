@@ -57,3 +57,64 @@
     }
   }
 }
+
+.Post {
+  padding: 24px 0;
+
+  &-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    border-bottom: none !important;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: #0871ab;
+      }
+
+      &:focus {
+        color: #23527c;
+      }
+    }
+  }
+
+  &-body {
+    margin: 16px 0;
+
+    p {
+      margin-bottom: 0;
+      line-height: inherit;
+    }
+  }
+
+  &-footer {
+    font-size: 14px;
+  }
+
+  &-author {
+    margin-right: 1.5em;
+    font-weight: 400;
+  }
+
+  &-date {
+    color: #a6a6a6;
+
+    .fa {
+      margin-right: .5em;
+    }
+  }
+
+  + .Post {
+    border-top: 1px solid #f0f0f0;
+  }
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}

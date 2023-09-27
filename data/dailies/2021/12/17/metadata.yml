@@ -4,5 +4,6 @@ description: >-
   中，我们讨论到了 Web Components 技术，一种新的 Web 前端容器化技术。在电子书里，我们主要介绍的是：如何使用 Web Components
   来构建微服务。而在这篇文章里，我们讨论的是 Web 组件的下半场：跨框架的 UI
   库。【另附《[我来聊聊面向组件的前端开发](https://ourai.ws/posts/component-based-frontend-web-development/)》》】
+date: '2021-12-17 00:00:00 +0800'
 origin:
   url: 'https://zhuanlan.zhihu.com/p/41974042'

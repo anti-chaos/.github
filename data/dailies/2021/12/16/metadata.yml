@@ -1,5 +1,6 @@
 title: 无视图交互模型，用代码完成需求文档的模型化描述
 description: >-
   在工作中，不同开发者思维方式不同，低级开发者需要等到设计稿完成之后，才能启动开发，中级开发者会根据交互稿利用系统风格就可以启动开发，而高级开发者，从参与需求讨论开始，就可以开始启动开发了。是什么让开发者无需在视图界面的引导下，就可以完成部分编程呢？【另附《[前端抽象模型](https://ourai.ws/topics/frontend-abstraction-model/)》和《[前端关键问题溯源](https://ourai.ws/notes/1fccd4ofg/)》】
+date: '2021-12-16 00:00:00 +0800'
 origin:
   url: 'https://www.tangshuang.net/7995.html'

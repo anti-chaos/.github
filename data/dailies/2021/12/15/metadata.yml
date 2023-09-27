@@ -1,4 +1,5 @@
 title: 使用函数式语言建立领域模型
 description: 讲述如何用 TypeScript 中的类型做领域建模。建议在开始编码前先写类型。
+date: '2021-12-15 00:00:00 +0800'
 origin:
   url: 'https://zhuanlan.zhihu.com/p/388845844'

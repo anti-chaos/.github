@@ -1,4 +1,4 @@
-const { getLocalRoot, getDataRoot, scanAndSortByAsc, readDirDeeply, readData, saveData, mkdir, readMetadata } = require('../helper');
+const { getLocalRoot, getDataRoot, scanAndSortByAsc, readDirDeeply, readData, saveData, mkdir, resolvePathFromParams, readEntity } = require('../helper');
 
 const feedFormat = /^\d{2}\.(\d{2})\s\-\s《\[([^\[\]]+)?\]\(([^\(\)]+)\)》：(.+)$/;
 
@@ -18,18 +18,37 @@ function convertMarkdownToYaml() {
         }
 
         const [full, day, title, url, description] = feed.match(feedFormat);
-        const dayDir = `${yearDir}/${monthFile.split('.')[0]}/${day}`;
+        const month = monthFile.split('.')[0];
+        const dayDir = `${yearDir}/${month}/${day}`;
 
         mkdir(dayDir);
-        saveData(`${dayDir}/metadata.yml`, { title, description, origin: { url } });
+        saveData(`${dayDir}/metadata.yml`, { title, description, date: `${params.year}-${month}-${day} 00:00:00 +0800`, origin: { url } });
       });
     });
   });
 }
 
+function generateFromYaml() {
+  const localDataRoot = getDataRoot();
+  const dataSourceDir = `${localDataRoot}/dailies`
+  const paramPath = 'year/month/day';
+  const siteDataDir = `${getLocalRoot()}/site/_data`;
+  const siteData = { items: {} };
+
+  readDirDeeply(dataSourceDir, paramPath.split('/'), {}, (_, params) => {
+    const entity = readEntity(`${dataSourceDir}/${resolvePathFromParams(paramPath, params)}`);
+
+    siteData.items[`${params.year}${params.month}${params.day}`] = entity;
+  });
+
+  saveData(`${siteDataDir}/dailies.yml`, siteData);
+}
+
 function generateDailies(markdownToYaml) {
   if (markdownToYaml === 'init') {
     convertMarkdownToYaml();
+  } else {
+    generateFromYaml();
   }
 }
 
