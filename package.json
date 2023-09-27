@@ -5,6 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
+    "build": "node ./build gen",
     "clean": "rm -rf ./site/.asset-cache",
     "start": "cd ./site && rake run",
     "predeploy": "npm run clean",

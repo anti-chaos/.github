@@ -1,0 +1,7 @@
+title: 聊聊前端 UI 组件：组件体系
+description: >-
+  在本系列的上篇文章《聊聊前端 UI 组件：组件特征》中，通过从关注点分离的角度进行前端 UI 组件的构成分析，并以较为抽象的视角对 UI
+  组件分门别类，以及描述了让组件间可以表现复用的继承关系，从而建立出前端 UI
+  组件的特征模型。本文将以上篇文章中所得出的特征模型为基础，探讨下如何设计并建立一个前端 UI 组件体系。
+origin:
+  url: 'https://ourai.ws/posts/the-system-of-frontend-ui-components/'

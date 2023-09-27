@@ -1,0 +1,4 @@
+title: 聊聊中后台前端应用：目录结构划分模式
+description: 目录结构实际就是模块拆分的体现，是架构的一部分，其划分方式应具有让开发者把文件放到正确位置的指导作用。
+origin:
+  url: 'https://ourai.ws/posts/patterns-of-directory-structure-in-frontend-projects/'
