@@ -5,6 +5,7 @@ css:
 permalink: index.html
 ---
 
+{% assign site_banner = "banners/anti-chaos" %}
 {% include header.html %}
 <main class="Page-content">
   <header class="Homepage-header">
@@ -22,21 +23,47 @@ permalink: index.html
       <div class="Article-content">
         <section>
           <h2>推荐阅读</h2>
+          <p>符合「<a href="/guides/">反混沌</a>」理念的文章——</p>
           {% assign utm_flag = "?utm_source=ntks.ourai.ws&utm_medium=homepage" %}
-          {% assign total = 1 %}
-          {% for item in site.data.dailies.items reversed %}
-            {% if total < 6 %}
-              {% assign daily = item[1] %}
+          {% assign total_count = 0 %}
+          <div class="Grid is-active">
+            {% assign item_ids = "" %}
+            {% for item in site.data.dailies.items reversed %}
+              {% assign total_count = total_count | plus: 1 %}
+              {% if total_count < 7 %}
+                {% if item_ids %}
+                  {% assign item_ids = item_ids | append: " " | append: item[0] %}
+                {% else %}
+                  {% assign item_ids = item[0] %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+            {% assign item_ids = item_ids | split: " " %}
+            {% for item_id in item_ids %}
+              {% assign daily = site.data.dailies.items[item_id] %}
               {% assign author = site.data.people.items[daily.origin.author] %}
-              <div class="Post">
-                <h3 class="Post-title"><a href="{{ daily.origin.url }}{{ utm_flag }}" target="_blank" rel="external nofollow">{{ daily.title }}</a></h3>
-                <div class="Post-body">{{ daily.description | markdownify }}</div>
-                <div class="Post-footer">{% if author %}<a class="Post-author" href="{{ author.homepage }}{{ utm_flag }}" target="_blank" rel="external nofollow">{{ author.name }}</a>{% endif %}{% if daily.date %}<time class="Post-date" datetime="{{ daily.date | date_to_xmlschema }}"><i class="fa fa-calendar"></i><span>{{ daily.date | date: "%F" }}</span></time>{% endif %}</div>
+              {% if forloop.index == item_ids.size %}
+                {% assign show_more = true %}
+              {% else %}
+                {% assign show_more = false %}
+              {% endif %}
+              <div class="Grid-item{% if show_more %} is-more{% endif %}">
+                <div class="Card EntryCard">
+                  <a class="Card-link EntryCard-link" {% if show_more %}href="/posts/"{% else %}href="{{ daily.origin.url }}{{ utm_flag }}" title="阅读《{{ daily.title }}》" target="_blank" rel="external nofollow"{% endif %}>
+                    <div class="EntryCard-header" style="background-image: url('{{ site_banner | asset_path }}');">
+                      <div class="EntryCard-brief">
+                        <h3 class="EntryCard-name" data-toc-skip="true">{{ daily.title }}</h3>
+                      </div>
+                    </div>
+                    <div class="EntryCard-body">
+                      <div class="EntryCard-description">{{ daily.description | markdownify | strip_html | strip_newlines | escape_once }}</div>
+                    </div>
+                    {% if show_more %}<div class="EntryCard-overlay"><span>+{{ total_count | minus: 5 }} 篇</span></div>{% endif %}
+                  </a>
+                </div>
               </div>
-            {% endif %}
-            {% assign total = total | plus: 1 %}
-          {% endfor %}
-          <p><a href="/posts/">查看更多 >></a></p>
+            {% endfor %}
+          </div>
         </section>
       </div>
     </article>
