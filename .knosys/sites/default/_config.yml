@@ -154,10 +154,6 @@ ksio:
             - javascripts/ksio/components/toc
       post:
         extends: page
-      _local/layouts/topic:
-        extends: page
-      _local/layouts/list:
-        extends: page
       _local/layouts/index:
         values:
           ksio_asset_css:
@@ -175,26 +171,6 @@ ksio:
             - javascripts/ksio/initializers/time
             - javascripts/ksio/vendors/jquery.lazyload
             - javascripts/ksio/initializers/lazyload
-      - scope:
-          path: repos
-          type: knosys
-        values:
-          layout: _local/layouts/topic
-      - scope:
-          path: lists
-          type: knosys
-        values:
-          layout: _local/layouts/list
-      - scope:
-          path: notes
-        values:
-          ksio_asset_css:
-            - local/syntax-highlighting
-      - scope:
-          path: projects
-        values:
-          ksio_asset_css:
-            - local/syntax-highlighting
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:

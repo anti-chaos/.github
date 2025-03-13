@@ -1,0 +1,15 @@
+<h2>推荐阅读</h2>
+<p>一些符合「<a href="/guides/">反混沌</a>」理念的文章——</p>
+<% const utm_flag = '?utm_source=ntks.ourai.ws&utm_medium=recommended' %>
+<% const site_banner = url_for('local/images/anti-chaos.jpg') %>
+<% Object.values(site.data['local/dailies'].items).slice().reverse().forEach(daily => { %>
+  <% const author = site.data['local/people'].items[daily.origin.author] %>
+  <section class="Post">
+    <div class="Post-banner" style="background-image: url('<%= site_banner %>');"></div>
+    <header class="Post-header">
+      <h3 class="Post-title" data-toc-skip="true"><a href="<%= daily.origin.url %><%= utm_flag %>" target="_blank" rel="external nofollow"><%= daily.title %></a></h3>
+    </header>
+    <div class="Post-body" title="<%= escape_html(trim(strip_html(markdown(daily.description)))) %>"><%- markdown(daily.description) %></div>
+    <div class="Post-footer"><% if (author) { %><a class="Post-author" href="<%= author.homepage %><%= utm_flag %>" target="_blank" rel="external nofollow"><%= author.name %></a><% } %><% if (daily.date) { %><time class="Post-date" datetime="<%= date_xml(daily.date) %>"><i class="fa fa-calendar"></i><span><%= date(daily.date, 'YYYY-MM-DD') %></span></time><% } %></div>
+  </section>
+<% }) %>

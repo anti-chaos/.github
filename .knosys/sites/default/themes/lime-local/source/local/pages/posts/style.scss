@@ -1,0 +1,79 @@
+@import "../../../stylesheets/helper";
+
+.Post {
+  padding-bottom: 24px;
+  @include pie-clearfix;
+
+  &-banner {
+    $w: 180px;
+
+    float: right;
+    width: $w;
+    height: $w / 16 * 9;
+    margin-left: 16px;
+    border-radius: 6px;
+    background: {
+      position: 50% 50%;
+      repeat: no-repeat;
+      size: cover;
+      color: #f0f0f0;
+    }
+  }
+
+  &-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 24px !important;
+    line-height: 1.3;
+    border-bottom: none !important;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: #0871ab;
+      }
+
+      &:focus {
+        color: #23527c;
+      }
+    }
+  }
+
+  &-body {
+    margin: 16px 0;
+
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      margin-bottom: 0;
+      line-height: inherit;
+    }
+  }
+
+  &-footer {
+    font-size: 14px;
+  }
+
+  &-author {
+    margin-right: 1.5em;
+    font-weight: 400;
+  }
+
+  &-date {
+    color: #a6a6a6;
+
+    .fa {
+      margin-right: .5em;
+    }
+  }
+
+  + .Post {
+    padding-top: 24px;
+    border-top: 1px solid #eee;
+  }
+}
