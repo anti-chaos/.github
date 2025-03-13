@@ -1,0 +1,15 @@
+<h2>核心成员</h2>
+<ul class="MemberList">
+  <% site.data['local/members'].forEach(mem => { %>
+  <li class="MemberList-item TeamMember">
+    <figure class="TeamMember-figure">
+      <a class="TeamMember-avatar" href="<%= mem.homepage %>" target="_blank" rel="external nofollow"><img src="<%= url_for(`local/images/avatars/${mem.avatar}`) %>" /></a>
+      <figcaption class="TeamMember-brief"><a href="<%= mem.homepage %>" target="_blank" rel="external nofollow"><%= mem.name %></a>，<%= mem.position %></figcaption>
+    </figure>
+  </li>
+  <% }) %>
+  <li class="MemberList-item TeamMember TeamMember--joinUs">
+    <a class="TeamMember-avatar" href="/join/"><span>寻找同路人</span></a>
+    <div class="TeamMember-brief">加入我们</div>
+  </li>
+</ul>
