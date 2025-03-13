@@ -2,27 +2,33 @@
   "name": "@ntks/website",
   "version": "0.0.0",
   "description": "",
-  "private": true,
   "main": "index.js",
-  "scripts": {
-    "build": "node ./build gen",
-    "clean": "rm -rf ./site/.asset-cache",
-    "start": "cd ./site && rake run",
-    "predeploy": "npm run clean",
-    "deploy": "cd ./site && rake deploy",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "private": true,
+  "hexo": {
+    "version": "6.3.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anti-chaos/.github.git"
+  "dependencies": {
+    "hexo": "^6.3.0",
+    "hexo-front-matter-defaults": "0.0.0",
+    "hexo-renderer-coffeescript": "^0.2.0",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-marked": "^6.0.0",
+    "hexo-renderer-sass": "^0.4.0",
+    "hexo-server": "^3.0.0"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/anti-chaos/.github/issues"
-  },
-  "homepage": "https://ntks.ourai.ws/",
   "devDependencies": {
-    "handie": "^1.0.8"
+    "@knosys/sdk": "^0.0.3",
+    "@ntks/toolbox": "^0.0.6",
+    "hexo-theme-lime": "0.0.0-alpha.3",
+    "js-yaml": "4.1.0",
+    "ksio": "0.0.3"
+  },
+  "scripts": {
+    "copy": "node .knosys/scripts copy",
+    "build": "node .knosys/scripts gen",
+    "clean": "rm -rf .asset-cache .cache .knosys/sites/*/.asset-cache .knosys/sites/*/.cache",
+    "start": "node .knosys/scripts serve",
+    "predeploy": "npm run clean",
+    "deploy": "node .knosys/scripts deploy"
   }
 }
