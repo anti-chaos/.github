@@ -137,9 +137,9 @@ theme_config:
     links:
       - text: FES
         url: https://fes.ourai.ws/
-  # analytics:
-  #   - provider: baidu
-  #     code: e6d6bb6702dbd74ffbc950a57ad9b6be
+  analytics:
+    - provider: baidu
+      code: 536a029cb6f810c8b77eaecd38ecfac6
 
 ksio:
   defaults:
