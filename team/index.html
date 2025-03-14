@@ -35,10 +35,10 @@
 
 
 
-  <title>开发套件 - 反混沌</title>
+  <title>「反混沌」的背后 - 反混沌</title>
 
 
-  <meta property="og:title" content="开发套件">
+  <meta property="og:title" content="「反混沌」的背后">
 
 
 
@@ -68,6 +68,8 @@
     
 <link rel="stylesheet" href="/stylesheets/ksio/vendors/share.css">
 
+<link rel="stylesheet" href="/stylesheets/local/pages/team.css">
+
     
   
     
@@ -93,7 +95,9 @@ var _hmt = _hmt || [];
   </head>
   
   
-  <body class="Page" itemscope itemtype="http://schema.org/WebPage">
+    
+  
+  <body class="Page has-headerImage" itemscope itemtype="http://schema.org/WebPage">
     
 
   <header class="Page-header">
@@ -163,6 +167,11 @@ var _hmt = _hmt || [];
 </li>
   
 
+  
+    <li><a href="/partners/">合作伙伴</a>
+</li>
+  
+
 </ul>
     </li>
   
@@ -194,6 +203,14 @@ var _hmt = _hmt || [];
 
 <main class="Page-content">
   
+  <!-- 页面横幅 -->
+  <div class="Page-banner hidden-xs" style="background-image: url('/images/local/banners/anti-chaos.jpg');">
+    <figure class="sr-only">
+      <img src="/images/local/banners/anti-chaos.jpg" alt="Anti-chaos">
+      <figcaption>Anti-chaos</figcaption>
+    </figure>
+  </div>
+
 
   <!-- 内容主体 -->
   <div class="container">
@@ -201,77 +218,27 @@ var _hmt = _hmt || [];
       <header class="Article-header">
         
   
-    <h1 class="Article-title">开发套件</h1>
+    <h1 class="Article-title">「反混沌」的背后</h1>
   
   
 
 
       </header>
-      <div class="Article-content col-md-9"><p>「反混沌」在工具层面的几大体系。</p>
-<h2 id="Infra"><a href="#Infra" class="headerlink" title="Infra"></a>Infra</h2><p>与日常开发息息相关的各类底层基础设施，如代码校验与格式化、开发套件等：</p>
-<table>
-<thead>
-<tr>
-<th>NPM 包</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/@ntks/stylelint-config"><code>@ntks/stylelint-config</code></a></td>
-<td>符合<a href="/guides/html-and-css-coding-style/">推荐的 CSS&#x2F;Sass 风格</a>的 Stylelint 配置</td>
-</tr>
-<tr>
-<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/@ntks/eslint-config"><code>@ntks/eslint-config</code></a></td>
-<td>符合<a href="/guides/javascript-coding-style/">推荐的 JavaScript&#x2F;TypeScript 风格</a>的 ESLint 配置</td>
-</tr>
-<tr>
-<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/@ntks/toolbox"><code>@ntks/toolbox</code></a></td>
-<td>日常开发工具包，可用 API 详见<a href="/projects/toolbox/">使用手册</a></td>
-</tr>
-<tr>
-<td><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/@ntks/event-emitter"><code>@ntks/event-emitter</code></a></td>
-<td>简易的事件触发器</td>
-</tr>
-</tbody></table>
-<h2 id="Fxxk-Design"><a href="#Fxxk-Design" class="headerlink" title="Fxxk Design"></a>Fxxk Design</h2><p>以「设计即代码」为目标的跨 JS-based 技术栈、跨平台 GUI 开发体系：</p>
-<table>
-<thead>
-<tr>
-<th>子体系&#x2F;模块</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a target="_blank" rel="noopener" href="https://petals-ui.github.io/">Petals</a></td>
-<td>原子化的 UI 组件基础设施，包括<a target="_blank" rel="noopener" href="https://ourai.ws/posts/the-system-of-frontend-ui-components/#section-1">风格组件</a>、<a target="_blank" rel="noopener" href="https://ourai.ws/posts/the-system-of-frontend-ui-components/#section-2">视觉组件</a>和<a target="_blank" rel="noopener" href="https://ourai.ws/posts/the-system-of-frontend-ui-components/#section-3">无头组件</a></td>
-</tr>
-<tr>
-<td><a target="_blank" rel="noopener" href="https://github.com/kokiri-ui">Kokiri</a></td>
-<td>与 Vue 绑定的<a target="_blank" rel="noopener" href="https://ourai.ws/posts/the-system-of-frontend-ui-components/#section-4">结构组件</a>，提供部分既有 UI 组件库的适配包</td>
-</tr>
-<tr>
-<td><a target="_blank" rel="noopener" href="https://github.com/zora-ui">Zora</a></td>
-<td>与 React 绑定的<a target="_blank" rel="noopener" href="https://ourai.ws/posts/the-system-of-frontend-ui-components/#section-4">结构组件</a>，提供部分既有 UI 组件库的适配包</td>
-</tr>
-</tbody></table>
-<h2 id="Future-js"><a href="#Future-js" class="headerlink" title="Future.js"></a>Future.js</h2><p>以「需求即代码」为目标，将前端应用各个层次、各个环节之间的通信规范化、标准化的开发体系：</p>
-<table>
-<thead>
-<tr>
-<th>子体系&#x2F;模块</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a target="_blank" rel="noopener" href="https://github.com/ourai/organik">Organik</a></td>
-<td>元数据逻辑引擎，用来收集元数据并生成上下文</td>
-</tr>
-<tr>
-<td><a target="_blank" rel="noopener" href="https://handiejs.github.io/">Handie</a></td>
-<td>渐进式配置驱动企业级中后台前端应用开发框架</td>
-</tr>
-</tbody></table>
-
+      <div class="Article-content col-md-9"><h2>核心成员</h2>
+<ul class="MemberList">
+  
+  <li class="MemberList-item TeamMember">
+    <figure class="TeamMember-figure">
+      <a class="TeamMember-avatar" href="https://ourai.ws/" target="_blank" rel="external nofollow"><img src="/images/local/avatars/ourai.jpg" /></a>
+      <figcaption class="TeamMember-brief"><a href="https://ourai.ws/" target="_blank" rel="external nofollow">欧雷</a>，发起人</figcaption>
+    </figure>
+  </li>
+  
+  <li class="MemberList-item TeamMember TeamMember--joinUs">
+    <a class="TeamMember-avatar" href="/join/"><span>寻找同路人</span></a>
+    <div class="TeamMember-brief">加入我们</div>
+  </li>
+</ul>
 </div>
       <footer class="Article-footer col-md-3">
   
@@ -315,7 +282,7 @@ var _hmt = _hmt || [];
         <div class="Footer-copyright">
           <p>
 
-&copy; 2018-2025 <a href="https://linxoid.com/ourai?utm_source=https://ntks.ourai.ws&amp;utm_medium=common-footer" target="_blank" rel="external nofollow">欧雷</a> 版权所有
+&copy; 2018-2025 <a href="https://labs.ourai.ws/?utm_source=https://ntks.ourai.ws&amp;utm_medium=common-footer" target="_blank" rel="external nofollow">OurAI Labs</a> 版权所有
 
 </p>
           <p>本站主题 <a href="https://ourai.github.io/lime/?utm_source=https://ntks.ourai.ws&amp;utm_medium=common-footer" target="_blank" rel="external nofollow">Lime</a> 由 <a href="https://linxoid.com/ourai/?utm_source=https://ntks.ourai.ws&amp;utm_medium=common-footer" target="_blank" rel="external nofollow">欧雷</a> 提供</p>

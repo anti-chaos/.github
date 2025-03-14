@@ -35,10 +35,10 @@
 
 
 
-  <title>「反混沌」的背后 - 反混沌</title>
+  <title>代码风格 - 反混沌</title>
 
 
-  <meta property="og:title" content="「反混沌」的背后">
+  <meta property="og:title" content="代码风格">
 
 
 
@@ -68,7 +68,11 @@
     
 <link rel="stylesheet" href="/stylesheets/ksio/vendors/share.css">
 
-<link rel="stylesheet" href="/local/pages/about/style.css">
+<link rel="stylesheet" href="/stylesheets/local/syntax-highlighting.css">
+
+<link rel="stylesheet" href="/stylesheets/local/pages/post.css">
+
+<link rel="stylesheet" href="/stylesheets/local/pages/doc.css">
 
     
   
@@ -95,14 +99,12 @@ var _hmt = _hmt || [];
   </head>
   
   
-    
-  
-  <body class="Page has-headerImage" itemscope itemtype="http://schema.org/WebPage">
+  <body class="Page" itemscope itemtype="http://schema.org/WebPage">
     
 
   <header class="Page-header">
   <div class="navbar navbar-static-top">
-    <div class="container">
+    <div class="container-fluid">
       <div class="navbar-header">
         
           <button class="navbar-toggle collapsed" type="button" data-target=".Page-navs" data-toggle="collapse">
@@ -167,6 +169,11 @@ var _hmt = _hmt || [];
 </li>
   
 
+  
+    <li><a href="/partners/">合作伙伴</a>
+</li>
+  
+
 </ul>
     </li>
   
@@ -196,44 +203,144 @@ var _hmt = _hmt || [];
   </div>
 </header>
 
-<main class="Page-content">
+<div class="Page-content">
   
-  <!-- 页面横幅 -->
-  <div class="Page-banner hidden-xs" style="background-image: url('/images/local/banners/anti-chaos.jpg');">
-    <figure class="sr-only">
-      <img src="/images/local/banners/anti-chaos.jpg" alt="Anti-chaos">
-      <figcaption>Anti-chaos</figcaption>
-    </figure>
-  </div>
+  
+    <aside class="Page-aside">
+      <div class="AsideBrand">
 
 
-  <!-- 内容主体 -->
-  <div class="container">
-    <article class="Page-main Article">
+  <a href="/">Anti-chaos</a>
+
+</div>
+      <nav class="AsideNav"><ul>
+  
+  
+    
+  
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        
+          <a href="/guides/">介绍</a>
+        
+      
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        <span>团队协作</span>
+        <ul>
+  
+  
+    
+  
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        <span>代码风格</span>
+        <ul>
+  
+  
+    
+  
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        
+          <a class="is-selected" href="/guides/coding-style/">总则</a>
+        
+      
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        
+          <a href="/guides/html-and-css-coding-style/">HTML &amp; CSS</a>
+        
+      
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        
+          <a href="/guides/javascript-coding-style/">JavaScript</a>
+        
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+</nav>
+    </aside>
+  
+  <main class="Page-main">
+    <article class="Article container-fluid">
       <header class="Article-header">
         
   
-    <h1 class="Article-title">「反混沌」的背后</h1>
+    <h1 class="Article-title">代码风格</h1>
   
   
 
 
       </header>
-      <div class="Article-content col-md-9"><h2>核心成员</h2>
-<ul class="MemberList">
-  
-  <li class="MemberList-item TeamMember">
-    <figure class="TeamMember-figure">
-      <a class="TeamMember-avatar" href="https://ourai.ws/" target="_blank" rel="external nofollow"><img src="/images/local/avatars/ourai.jpg" /></a>
-      <figcaption class="TeamMember-brief"><a href="https://ourai.ws/" target="_blank" rel="external nofollow">欧雷</a>，发起人</figcaption>
-    </figure>
-  </li>
-  
-  <li class="MemberList-item TeamMember TeamMember--joinUs">
-    <a class="TeamMember-avatar" href="/join/"><span>寻找同路人</span></a>
-    <div class="TeamMember-brief">加入我们</div>
-  </li>
+      <div class="Article-content col-md-9"><p>风格一致的代码，看起来像是一个人写的。</p>
+<h2 id="总则"><a href="#总则" class="headerlink" title="总则"></a>总则</h2><h3 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h3><p>总的来说，在开发中任何与「命名」相关的事情都会基于「驼峰式（camel case）」和「肉串式（kebab case）」来命名。</p>
+<h4 id="目录-文件"><a href="#目录-文件" class="headerlink" title="目录 &amp; 文件"></a>目录 &amp; 文件</h4><p>组件相关的 JS 和 SCSS 文件使用大驼峰式命名，如：<code>ComponentName.js</code>、<code>ComponentName.scss</code>。</p>
+<p>目录及与组件无关的文件用肉串式命名，如：<code>directory-name</code>、<code>file-name.js</code>、<code>file-name.jpg</code> 等。</p>
+<h4 id="全局-VS-业务"><a href="#全局-VS-业务" class="headerlink" title="全局 VS 业务"></a>全局 VS 业务</h4><p>开发时所涉及的组件和模型都分为全局的和业务级的，如果命名很随意，不仅会造成认知上的困扰，还会增加应用的不稳定性。</p>
+<p>全局的组件或模型在命名时尽可能简洁、达意，能用一个单词就不要用两个；业务级的则必须加上带有业务场景的词汇，用两个及以上的单词命名。</p>
+<h2 id="细则"><a href="#细则" class="headerlink" title="细则"></a>细则</h2><p>各语言的具体请见：</p>
+<ul>
+<li><a href="/guides/html-and-css-coding-style/">HTML &amp; CSS 风格指南</a></li>
+<li><a href="/guides/javascript-coding-style/">JavaScript 风格指南</a></li>
 </ul>
+<p>某个视图层库&#x2F;框架相关的请看：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://angular.io/guide/styleguide">Angular</a></li>
+<li><a target="_blank" rel="noopener" href="https://vuejs.org/v2/style-guide/">Vue</a></li>
+</ul>
+
 </div>
       <footer class="Article-footer col-md-3">
   
@@ -254,15 +361,9 @@ var _hmt = _hmt || [];
 
 
 </footer>
-      
-      
     </article>
-    
-
-  </div>
-</main>
-<footer class="Page-footer Footer">
-  <div class="container">
+    <footer class="Page-footer Footer">
+  <div class="container-fluid">
     
     <div class="Footer-description">
       
@@ -277,7 +378,7 @@ var _hmt = _hmt || [];
         <div class="Footer-copyright">
           <p>
 
-&copy; 2018-2025 <a href="https://linxoid.com/ourai?utm_source=https://ntks.ourai.ws&amp;utm_medium=common-footer" target="_blank" rel="external nofollow">欧雷</a> 版权所有
+&copy; 2018-2025 <a href="https://labs.ourai.ws/?utm_source=https://ntks.ourai.ws&amp;utm_medium=common-footer" target="_blank" rel="external nofollow">OurAI Labs</a> 版权所有
 
 </p>
           <p>本站主题 <a href="https://ourai.github.io/lime/?utm_source=https://ntks.ourai.ws&amp;utm_medium=common-footer" target="_blank" rel="external nofollow">Lime</a> 由 <a href="https://linxoid.com/ourai/?utm_source=https://ntks.ourai.ws&amp;utm_medium=common-footer" target="_blank" rel="external nofollow">欧雷</a> 提供</p>
@@ -288,6 +389,8 @@ var _hmt = _hmt || [];
   </div>
 </footer>
 
+  </main>
+</div>
 
 
 
@@ -299,6 +402,16 @@ var _hmt = _hmt || [];
 <script src="/javascripts/ksio/components/page.js"></script>
 
 <script src="/javascripts/ksio/components/toc.js"></script>
+
+<script src="/javascripts/ksio/vendors/jquery.timeago.js"></script>
+
+<script src="/javascripts/ksio/vendors/jquery.timeago.zh-CN.js"></script>
+
+<script src="/javascripts/ksio/initializers/time.js"></script>
+
+<script src="/javascripts/ksio/vendors/jquery.lazyload.js"></script>
+
+<script src="/javascripts/ksio/initializers/lazyload.js"></script>
 
   </body>
 </html>

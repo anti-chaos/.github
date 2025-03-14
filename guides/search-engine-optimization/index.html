@@ -35,10 +35,10 @@
 
 
 
-  <title>Handie - 反混沌</title>
+  <title>搜索引擎优化 - 反混沌</title>
 
 
-  <meta property="og:title" content="Handie">
+  <meta property="og:title" content="搜索引擎优化">
 
 
 
@@ -67,6 +67,12 @@
 
     
 <link rel="stylesheet" href="/stylesheets/ksio/vendors/share.css">
+
+<link rel="stylesheet" href="/stylesheets/local/syntax-highlighting.css">
+
+<link rel="stylesheet" href="/stylesheets/local/pages/post.css">
+
+<link rel="stylesheet" href="/stylesheets/local/pages/doc.css">
 
     
   
@@ -98,7 +104,7 @@ var _hmt = _hmt || [];
 
   <header class="Page-header">
   <div class="navbar navbar-static-top">
-    <div class="container">
+    <div class="container-fluid">
       <div class="navbar-header">
         
           <button class="navbar-toggle collapsed" type="button" data-target=".Page-navs" data-toggle="collapse">
@@ -163,6 +169,11 @@ var _hmt = _hmt || [];
 </li>
   
 
+  
+    <li><a href="/partners/">合作伙伴</a>
+</li>
+  
+
 </ul>
     </li>
   
@@ -192,23 +203,129 @@ var _hmt = _hmt || [];
   </div>
 </header>
 
-<main class="Page-content">
+<div class="Page-content">
   
+  
+    <aside class="Page-aside">
+      <div class="AsideBrand">
 
-  <!-- 内容主体 -->
-  <div class="container">
-    <article class="Page-main Article">
+
+  <a href="/">Anti-chaos</a>
+
+</div>
+      <nav class="AsideNav"><ul>
+  
+  
+    
+  
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        
+          <a href="/guides/">介绍</a>
+        
+      
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        <span>团队协作</span>
+        <ul>
+  
+  
+    
+  
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        <span>代码风格</span>
+        <ul>
+  
+  
+    
+  
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        
+          <a href="/guides/coding-style/">总则</a>
+        
+      
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        
+          <a href="/guides/html-and-css-coding-style/">HTML &amp; CSS</a>
+        
+      
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        
+          <a href="/guides/javascript-coding-style/">JavaScript</a>
+        
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+</nav>
+    </aside>
+  
+  <main class="Page-main">
+    <article class="Article container-fluid">
       <header class="Article-header">
         
   
-    <h1 class="Article-title">Handie</h1>
+    <h1 class="Article-title">搜索引擎优化</h1>
   
   
 
 
       </header>
-      <div class="Article-content col-md-9"><p>针对不同平台、技术栈提供尽可能一致的开发体验的前端开发框架。</p>
-<p>GitHub 地址：<a target="_blank" rel="noopener" href="https://github.com/handiejs">https://github.com/handiejs</a></p>
+      <div class="Article-content col-md-9"><h2 id="语义化"><a href="#语义化" class="headerlink" title="语义化"></a>语义化</h2><p>语义化是为了让机器理解页面中的内容。一方面可以使用 HTML 中的<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">语义化标签</a>供爬虫简单识别；另一方面需要在页面中添加更多的<a target="_blank" rel="noopener" href="https://developers.google.com/search/docs/guides/intro-structured-data">结构化数据</a>，可以使用 <a target="_blank" rel="noopener" href="https://www.w3.org/TR/rdfa-in-html/">RDFa</a>、<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTML/microformats">微格式</a>、<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata">微数据</a>、<a target="_blank" rel="noopener" href="https://www.w3.org/TR/json-ld11/">JSON-LD</a> 等。</p>
+<h2 id="可访问性"><a href="#可访问性" class="headerlink" title="可访问性"></a>可访问性</h2><p>增加页面可访问性的目的是不仅让常人可以正常访问页面，也要<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility">让那些残障人士能够正常访问</a>。</p>
 
 </div>
       <footer class="Article-footer col-md-3">
@@ -230,15 +347,9 @@ var _hmt = _hmt || [];
 
 
 </footer>
-      
-      
     </article>
-    
-
-  </div>
-</main>
-<footer class="Page-footer Footer">
-  <div class="container">
+    <footer class="Page-footer Footer">
+  <div class="container-fluid">
     
     <div class="Footer-description">
       
@@ -253,7 +364,7 @@ var _hmt = _hmt || [];
         <div class="Footer-copyright">
           <p>
 
-&copy; 2018-2025 <a href="https://linxoid.com/ourai?utm_source=https://ntks.ourai.ws&amp;utm_medium=common-footer" target="_blank" rel="external nofollow">欧雷</a> 版权所有
+&copy; 2018-2025 <a href="https://labs.ourai.ws/?utm_source=https://ntks.ourai.ws&amp;utm_medium=common-footer" target="_blank" rel="external nofollow">OurAI Labs</a> 版权所有
 
 </p>
           <p>本站主题 <a href="https://ourai.github.io/lime/?utm_source=https://ntks.ourai.ws&amp;utm_medium=common-footer" target="_blank" rel="external nofollow">Lime</a> 由 <a href="https://linxoid.com/ourai/?utm_source=https://ntks.ourai.ws&amp;utm_medium=common-footer" target="_blank" rel="external nofollow">欧雷</a> 提供</p>
@@ -264,6 +375,8 @@ var _hmt = _hmt || [];
   </div>
 </footer>
 
+  </main>
+</div>
 
 
 
@@ -275,6 +388,16 @@ var _hmt = _hmt || [];
 <script src="/javascripts/ksio/components/page.js"></script>
 
 <script src="/javascripts/ksio/components/toc.js"></script>
+
+<script src="/javascripts/ksio/vendors/jquery.timeago.js"></script>
+
+<script src="/javascripts/ksio/vendors/jquery.timeago.zh-CN.js"></script>
+
+<script src="/javascripts/ksio/initializers/time.js"></script>
+
+<script src="/javascripts/ksio/vendors/jquery.lazyload.js"></script>
+
+<script src="/javascripts/ksio/initializers/lazyload.js"></script>
 
   </body>
 </html>
