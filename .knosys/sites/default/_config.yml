@@ -103,8 +103,8 @@ theme_config:
     color: "#0871ab"
   copyright:
     owner:
-      text: 欧雷
-      url: https://linxoid.com/ourai
+      text: OurAI Labs
+      url: https://labs.ourai.ws/
     period:
       start: 2018
   header:
@@ -125,6 +125,8 @@ theme_config:
             url: https://handiejs.github.io/kit/
           - text: 代码风格
             url: /guides/coding-style/
+          - text: 合作伙伴
+            url: /partners/
       - text: 关于
         children:
           - text: 团队
