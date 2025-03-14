@@ -4,6 +4,7 @@ banner:
   url: images/local/banners/anti-chaos.jpg
   description: Anti-chaos
 image: images/local/banners/anti-chaos.jpg
+permalink: /join/
 ---
 
 ## 我们是谁？

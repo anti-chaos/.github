@@ -1,5 +1,6 @@
 ---
 title: 代码风格
+permalink: /guides/coding-style/
 ---
 
 风格一致的代码，看起来像是一个人写的。

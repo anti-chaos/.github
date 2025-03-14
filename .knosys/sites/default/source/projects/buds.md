@@ -1,5 +1,6 @@
 ---
 title: Buds
+permalink: /projects/buds/
 ---
 
 遵循 SUIT CSS 命名规范（BEM 的变体）的 CSS 框架。

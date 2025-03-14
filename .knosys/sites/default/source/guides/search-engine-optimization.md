@@ -1,5 +1,6 @@
 ---
 title: 搜索引擎优化
+permalink: /guides/search-engine-optimization/
 ---
 
 ## 语义化

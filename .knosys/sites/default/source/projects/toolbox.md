@@ -2,6 +2,7 @@
 title: >
   @ntks/toolbox 使用手册
 ksio_seo_title: Toolbox 使用手册
+permalink: /projects/toolbox/
 ---
 
 用于日常开发的工具包，可用 API 有——

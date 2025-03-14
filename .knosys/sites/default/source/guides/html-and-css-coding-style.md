@@ -1,5 +1,6 @@
 ---
 title: HTML & CSS 风格指南
+permalink: /guides/html-and-css-coding-style/
 ---
 
 ## 命名

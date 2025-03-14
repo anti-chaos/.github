@@ -1,5 +1,6 @@
 ---
 title: JavaScript 风格指南
+permalink: /guides/javascript-coding-style/
 ---
 
 ## 命名
