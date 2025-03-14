@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <title>Toolbox 使用手册 - 反混沌</title>
+
+
+  <meta property="og:title" content="Toolbox 使用手册">
+
+
+
+
+  
+    
+  
+
+
+  <meta name="keywords" content="反混沌,前端工程,前端开发,低代码,anti-chaos,ntks">
+
+
+<!-- 页面渲染兼容性 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<!-- 订阅 -->
+
+<meta name="theme-color" content="#0871ab">
+<link rel="shortcut icon" href="/images/ksio/favicon.ico">
+
+
+    
+<link rel="stylesheet" href="/stylesheets/global.css">
+
+    
+<link rel="stylesheet" href="/stylesheets/ksio/vendors/share.css">
+
+    
+  
+    
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement('script');
+  hm.src = '//hm.baidu.com/hm.js?536a029cb6f810c8b77eaecd38ecfac6';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    
+  
+
+
+    
+<script src="/javascripts/ksio/vendors/jquery-1.11.3.min.js"></script>
+
+    
+<script src="/javascripts/ksio/vendors/bootstrap.min.js"></script>
+
+  </head>
+  
+  
+  <body class="Page" itemscope itemtype="http://schema.org/WebPage">
+    
+
+  <header class="Page-header">
+  <div class="navbar navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        
+          <button class="navbar-toggle collapsed" type="button" data-target=".Page-navs" data-toggle="collapse">
+            <span class="sr-only">Toggle navs</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        
+        
+          
+
+
+  <a class="navbar-brand" href="/">Anti-chaos</a>
+
+
+        
+      </div>
+      <!-- Nav menus -->
+      <nav class="Page-navs navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          
+  
+    <li class="dropdown">
+      <a class="dropdown-toggle" href="javascript:void(0);" data-toggle="dropdown">学习 <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+  
+    <li><a href="/guides/">指南</a>
+</li>
+  
+
+  
+    <li><a href="/posts/">文章</a>
+</li>
+  
+
+</ul>
+    </li>
+  
+
+  
+    <li class="dropdown">
+      <a class="dropdown-toggle" href="javascript:void(0);" data-toggle="dropdown">生态 <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+  
+    <li><a href="/projects/toolbox/">Toolbox</a>
+</li>
+  
+
+  
+    <li><a href="https://petals-ui.github.io/?utm_source=https://ntks.ourai.ws&amp;utm_medium=common-header" target="_blank" rel="external nofollow">Petals</a>
+</li>
+  
+
+  
+    <li><a href="https://handiejs.github.io/kit/?utm_source=https://ntks.ourai.ws&amp;utm_medium=common-header" target="_blank" rel="external nofollow">Handie</a>
+</li>
+  
+
+  
+    <li><a href="/guides/coding-style/">代码风格</a>
+</li>
+  
+
+</ul>
+    </li>
+  
+
+  
+    <li class="dropdown">
+      <a class="dropdown-toggle" href="javascript:void(0);" data-toggle="dropdown">关于 <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+  
+    <li><a href="/team/">团队</a>
+</li>
+  
+
+  
+    <li><a href="https://github.com/anti-chaos?utm_source=https://ntks.ourai.ws&amp;utm_medium=common-header" target="_blank" rel="external nofollow">GitHub</a>
+</li>
+  
+
+</ul>
+    </li>
+  
+
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="Page-content">
+  
+
+  <!-- 内容主体 -->
+  <div class="container">
+    <article class="Page-main Article">
+      <header class="Article-header">
+        
+  
+    <h1 class="Article-title">@ntks/toolbox 使用手册
+</h1>
+  
+  
+
+
+      </header>
+      <div class="Article-content col-md-9"><p>用于日常开发的工具包，可用 API 有——</p>
+<h2 id="判断"><a href="#判断" class="headerlink" title="判断"></a>判断</h2><h3 id="isBoolean-target"><a href="#isBoolean-target" class="headerlink" title="isBoolean(target)"></a><code>isBoolean(target)</code></h3><p>判断是否为布尔类型。</p>
+<h3 id="isNumber-target"><a href="#isNumber-target" class="headerlink" title="isNumber(target)"></a><code>isNumber(target)</code></h3><p>判断是否为数字类型，如果是 <code>NaN</code> 的话则返回 <code>false</code>。</p>
+<h3 id="isString-target"><a href="#isString-target" class="headerlink" title="isString(target)"></a><code>isString(target)</code></h3><p>判断是否为字符串类型。</p>
+<h3 id="isAsyncFunction-target"><a href="#isAsyncFunction-target" class="headerlink" title="isAsyncFunction(target)"></a><code>isAsyncFunction(target)</code></h3><p>判断是否为异步函数类型。</p>
+<h3 id="isFunction-target"><a href="#isFunction-target" class="headerlink" title="isFunction(target)"></a><code>isFunction(target)</code></h3><p>判断是否为函数类型，包括普通函数和异步函数。</p>
+<h3 id="isArray-target"><a href="#isArray-target" class="headerlink" title="isArray(target)"></a><code>isArray(target)</code></h3><p>判断是否为数组类型。</p>
+<h3 id="isDate-target"><a href="#isDate-target" class="headerlink" title="isDate(target)"></a><code>isDate(target)</code></h3><p>判断是否为日期类型。</p>
+<h3 id="isRegExp-target"><a href="#isRegExp-target" class="headerlink" title="isRegExp(target)"></a><code>isRegExp(target)</code></h3><p>判断是否为正则表达式类型。</p>
+<h3 id="isObject-target"><a href="#isObject-target" class="headerlink" title="isObject(target)"></a><code>isObject(target)</code></h3><p>判断是否为对象类型。</p>
+<h3 id="isLooseObject-target"><a href="#isLooseObject-target" class="headerlink" title="isLooseObject(target)"></a><code>isLooseObject(target)</code></h3><p>宽松地判断是否为对象类型，<code>target</code> 是数组等时也返回 <code>true</code>。</p>
+<h3 id="isNumeric-target"><a href="#isNumeric-target" class="headerlink" title="isNumeric(target)"></a><code>isNumeric(target)</code></h3><p>判断是否为数字或类数字类型。</p>
+<h3 id="isGlobal-target"><a href="#isGlobal-target" class="headerlink" title="isGlobal(target)"></a><code>isGlobal(target)</code></h3><p>判断是否为宿主环境全局对象，在浏览器环境中就是 <code>window</code> 对象。</p>
+<h3 id="isArrayLike-target"><a href="#isArrayLike-target" class="headerlink" title="isArrayLike(target)"></a><code>isArrayLike(target)</code></h3><p>判断是否为类数组对象。</p>
+<h3 id="isPlainObject-target"><a href="#isPlainObject-target" class="headerlink" title="isPlainObject(target)"></a><code>isPlainObject(target)</code></h3><p>判断是否为纯对象。</p>
+<h3 id="isUrl-target"><a href="#isUrl-target" class="headerlink" title="isUrl(target)"></a><code>isUrl(target)</code></h3><p>判断是否为一个 URL 字符串。</p>
+<h3 id="isEmail-target"><a href="#isEmail-target" class="headerlink" title="isEmail(target)"></a><code>isEmail(target)</code></h3><p>判断是否为电子邮箱。</p>
+<h3 id="isCellphone-target"><a href="#isCellphone-target" class="headerlink" title="isCellphone(target)"></a><code>isCellphone(target)</code></h3><p>判断是否为手机号。</p>
+<h2 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h2><h3 id="plus-num1-num2-others"><a href="#plus-num1-num2-others" class="headerlink" title="plus(num1, num2, ...others)"></a><code>plus(num1, num2, ...others)</code></h3><p>精确加法。</p>
+<h3 id="minus-num1-num2-others"><a href="#minus-num1-num2-others" class="headerlink" title="minus(num1, num2, ...others)"></a><code>minus(num1, num2, ...others)</code></h3><p>精确减法。</p>
+<h3 id="multiply-num1-num2-others"><a href="#multiply-num1-num2-others" class="headerlink" title="multiply(num1, num2, ...others)"></a><code>multiply(num1, num2, ...others)</code></h3><p>精确乘法。</p>
+<h3 id="divided-num1-num2-others"><a href="#divided-num1-num2-others" class="headerlink" title="divided(num1, num2, ...others)"></a><code>divided(num1, num2, ...others)</code></h3><p>精确除法。</p>
+<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><h3 id="each-target-callback"><a href="#each-target-callback" class="headerlink" title="each(target, callback)"></a><code>each(target, callback)</code></h3><p>遍历指定对象，与 <a target="_blank" rel="noopener" href="http://api.jquery.com/jQuery.each/"><code>jQuery.each()</code></a> 效果类似。</p>
+<h3 id="mixin-args"><a href="#mixin-args" class="headerlink" title="mixin(...args)"></a><code>mixin(...args)</code></h3><p>扩展指定对象，与 <a target="_blank" rel="noopener" href="http://api.jquery.com/jQuery.extend/"><code>jQuery.extend()</code></a> 效果一样。</p>
+<h3 id="arrayify-target"><a href="#arrayify-target" class="headerlink" title="arrayify(target)"></a><code>arrayify(target)</code></h3><p>将目标转化为数组。</p>
+<h3 id="includes-target-collection"><a href="#includes-target-collection" class="headerlink" title="includes(target, collection)"></a><code>includes(target, collection)</code></h3><p>判断目标是否在集合中。</p>
+<h3 id="map-target-callback"><a href="#map-target-callback" class="headerlink" title="map(target, callback)"></a><code>map(target, callback)</code></h3><p>对集合中的每个元素进行处理并返回一个新的集合。</p>
+<h3 id="filter-arr-callback"><a href="#filter-arr-callback" class="headerlink" title="filter(arr, callback)"></a><code>filter(arr, callback)</code></h3><p>对集合中的每个元素进行过滤并返回一个新的集合。</p>
+<h3 id="last-target"><a href="#last-target" class="headerlink" title="last(target)"></a><code>last(target)</code></h3><p>获取集合中的最后一个元素。</p>
+<h3 id="keys-target"><a href="#keys-target" class="headerlink" title="keys(target)"></a><code>keys(target)</code></h3><p>获取指定对象的所有键。</p>
+<h3 id="clone-target"><a href="#clone-target" class="headerlink" title="clone(target)"></a><code>clone(target)</code></h3><p>克隆目标。</p>
+<h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><h3 id="pick-obj-paths"><a href="#pick-obj-paths" class="headerlink" title="pick(obj, paths)"></a><code>pick(obj, paths)</code></h3><p>从指定对象中摘取指定键值并返回新对象。</p>
+<h3 id="omit-obj-paths"><a href="#omit-obj-paths" class="headerlink" title="omit(obj, paths)"></a><code>omit(obj, paths)</code></h3><p>从指定对象中忽略指定键值并返回新对象。</p>
+<h2 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h2><h3 id="saveData-storage-ref-val-merge"><a href="#saveData-storage-ref-val-merge" class="headerlink" title="saveData(storage, ref, val, merge?)"></a><code>saveData(storage, ref, val, merge?)</code></h3><p>存储数据。</p>
+<h3 id="retrieveData-storage-ref"><a href="#retrieveData-storage-ref" class="headerlink" title="retrieveData(storage, ref)"></a><code>retrieveData(storage, ref)</code></h3><p>获取数据。</p>
+<h3 id="set-ref-val"><a href="#set-ref-val" class="headerlink" title="set(ref, val)"></a><code>set(ref, val)</code></h3><p>设置应用业务数据。</p>
+<h3 id="get-ref"><a href="#get-ref" class="headerlink" title="get(ref)"></a><code>get(ref)</code></h3><p>获取应用业务数据。</p>
+<h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><h3 id="href-url"><a href="#href-url" class="headerlink" title="href(url)"></a><code>href(url)</code></h3><p>返回 URL 的 <code>href</code> 部分。</p>
+<h3 id="protocol-url"><a href="#protocol-url" class="headerlink" title="protocol(url)"></a><code>protocol(url)</code></h3><p>返回 URL 的 <code>protocol</code> 部分。</p>
+<h3 id="host-url"><a href="#host-url" class="headerlink" title="host(url)"></a><code>host(url)</code></h3><p>返回 URL 的 <code>host</code> 部分。</p>
+<h3 id="hostname-url"><a href="#hostname-url" class="headerlink" title="hostname(url)"></a><code>hostname(url)</code></h3><p>返回 URL 的 <code>hostname</code> 部分。</p>
+<h3 id="port-url"><a href="#port-url" class="headerlink" title="port(url)"></a><code>port(url)</code></h3><p>返回 URL 的 <code>port</code> 部分。</p>
+<h3 id="pathname-url"><a href="#pathname-url" class="headerlink" title="pathname(url)"></a><code>pathname(url)</code></h3><p>返回 URL 的 <code>pathname</code> 部分。</p>
+<h3 id="hash-url"><a href="#hash-url" class="headerlink" title="hash(url)"></a><code>hash(url)</code></h3><p>返回 URL 的 <code>hash</code> 部分。</p>
+<h3 id="username-url"><a href="#username-url" class="headerlink" title="username(url)"></a><code>username(url)</code></h3><p>返回 URL 的 <code>username</code> 部分。</p>
+<h3 id="password-url"><a href="#password-url" class="headerlink" title="password(url)"></a><code>password(url)</code></h3><p>返回 URL 的 <code>password</code> 部分。</p>
+<h3 id="origin-url"><a href="#origin-url" class="headerlink" title="origin(url)"></a><code>origin(url)</code></h3><p>返回 URL 的 <code>origin</code> 部分。</p>
+<h3 id="search-url"><a href="#search-url" class="headerlink" title="search(url)"></a><code>search(url)</code></h3><p>返回 URL 的 <code>search</code> 部分。</p>
+<h3 id="query-url-key"><a href="#query-url-key" class="headerlink" title="query(url, key?)"></a><code>query(url, key?)</code></h3><p>将查询字符串变成对象并返回指定键的值，若未指定则返回对象。</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="hasOwnProp-prop-obj"><a href="#hasOwnProp-prop-obj" class="headerlink" title="hasOwnProp(prop, obj)"></a><code>hasOwnProp(prop, obj)</code></h3><p>判断某个对象上是否有指定属性。</p>
+<h3 id="capitalize-str"><a href="#capitalize-str" class="headerlink" title="capitalize(str)"></a><code>capitalize(str)</code></h3><p>使字符串首字母大写。</p>
+<h3 id="generateRandomId-prefix"><a href="#generateRandomId-prefix" class="headerlink" title="generateRandomId(prefix?)"></a><code>generateRandomId(prefix?)</code></h3><p>生成随机 ID。</p>
+<h3 id="noop"><a href="#noop" class="headerlink" title="noop()"></a><code>noop()</code></h3><p>空函数，一般用作某操作默认值。</p>
+
+</div>
+      <footer class="Article-footer col-md-3">
+  
+  <div class="Widget Widget--share">
+    <div class="Widget-body">
+      <p>分享到<i class="fa fa-share-alt"></i></p>
+      <div class="social-share" data-sites="wechat,weibo,twitter"></div>
+    </div>
+  </div>
+
+
+  <section class="Widget Widget--toc">
+  <div class="Widget-header">
+    <h2 class="Widget-title">目录</h2>
+  </div>
+  <div class="Widget-body"></div>
+</section>
+
+
+</footer>
+      
+      
+        <!-- 评论区 -->
+        <div class="Article-comments col-md-9">
+  
+    
+
+
+  
+  
+  <div id="disqus_thread"></div>
+  
+    <script>
+      var disqus_config = function () {
+        this.page.link = 'https://example.io/projects/toolbox';
+        this.page.identifier = "/projects/toolbox";
+        this.page.title = '@ntks/toolbox 使用手册
+';
+      };
+
+      (function() {
+        var d = document, s = d.createElement('script');
+
+        s.src = '//anti-chaos.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a target="_blank" href="https://disqus.com/?ref_noscript" rel="external nofollow noopener">comments powered by Disqus.</a></noscript>
+    <script id="dsq-count-scr" src="//anti-chaos.disqus.com/count.js" async></script>
+  
+
+
+  
+
+</div>
+      
+    </article>
+    
+
+  </div>
+</main>
+<footer class="Page-footer Footer">
+  <div class="container">
+    
+    <div class="Footer-description">
+      
+        <!-- Important links -->
+        <nav class="Footer-navs">
+          <ul><li><a href="https://fes.ourai.ws/?utm_source=https://ntks.ourai.ws&amp;utm_medium=common-footer" target="_blank" rel="external nofollow"><span>FES</span></a>
+</li></ul>
+        </nav>
+      
+      
+        <!-- Copyright -->
+        <div class="Footer-copyright">
+          <p>
+
+&copy; 2018-2025 <a href="https://linxoid.com/ourai?utm_source=https://ntks.ourai.ws&amp;utm_medium=common-footer" target="_blank" rel="external nofollow">欧雷</a> 版权所有
+
+</p>
+          <p>本站主题 <a href="https://ourai.github.io/lime/?utm_source=https://ntks.ourai.ws&amp;utm_medium=common-footer" target="_blank" rel="external nofollow">Lime</a> 由 <a href="https://linxoid.com/ourai/?utm_source=https://ntks.ourai.ws&amp;utm_medium=common-footer" target="_blank" rel="external nofollow">欧雷</a> 提供</p>
+          
+        </div>
+      
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+    <script>$('.Article-content > table').addClass('table table-bordered')</script>
+    
+<script src="/javascripts/ksio/vendors/share.min.js"></script>
+
+<script src="/javascripts/ksio/components/page.js"></script>
+
+<script src="/javascripts/ksio/components/toc.js"></script>
+
+  </body>
+</html>
+

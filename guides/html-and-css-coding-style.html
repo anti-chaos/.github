@@ -35,10 +35,10 @@
 
 
 
-  <title>项目 - 反混沌</title>
+  <title>HTML &amp;amp; CSS 风格指南 - 反混沌</title>
 
 
-  <meta property="og:title" content="项目">
+  <meta property="og:title" content="HTML &amp;amp; CSS 风格指南">
 
 
 
@@ -68,6 +68,12 @@
     
 <link rel="stylesheet" href="/stylesheets/ksio/vendors/share.css">
 
+<link rel="stylesheet" href="/local/syntax-highlighting.css">
+
+<link rel="stylesheet" href="/local/pages/post.css">
+
+<link rel="stylesheet" href="/local/pages/doc.css">
+
     
   
     
@@ -93,14 +99,12 @@ var _hmt = _hmt || [];
   </head>
   
   
-    
-  
-  <body class="Page has-headerImage" itemscope itemtype="http://schema.org/WebPage">
+  <body class="Page" itemscope itemtype="http://schema.org/WebPage">
     
 
   <header class="Page-header">
   <div class="navbar navbar-static-top">
-    <div class="container">
+    <div class="container-fluid">
       <div class="navbar-header">
         
           <button class="navbar-toggle collapsed" type="button" data-target=".Page-navs" data-toggle="collapse">
@@ -194,39 +198,134 @@ var _hmt = _hmt || [];
   </div>
 </header>
 
-<main class="Page-content">
+<div class="Page-content">
   
-  <!-- 页面横幅 -->
-  <div class="Page-banner hidden-xs" style="background-image: url('/images/local/banners/boxes.jpg');">
-    <figure class="sr-only">
-      <img src="/images/local/banners/boxes.jpg" alt="">
-      <figcaption></figcaption>
-    </figure>
-  </div>
+  
+    <aside class="Page-aside">
+      <div class="AsideBrand">
 
 
-  <!-- 内容主体 -->
-  <div class="container">
-    <article class="Page-main Article">
+  <a href="/">Anti-chaos</a>
+
+</div>
+      <nav class="AsideNav"><ul>
+  
+  
+    
+  
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        
+          <a href="/guides/">介绍</a>
+        
+      
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        <span>团队协作</span>
+        <ul>
+  
+  
+    
+  
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        <span>代码风格</span>
+        <ul>
+  
+  
+    
+  
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        
+          <a href="/guides/coding-style/">总则</a>
+        
+      
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        
+          <a href="/guides/html-and-css-coding-style/">HTML &amp; CSS</a>
+        
+      
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        
+          <a href="/guides/javascript-coding-style/">JavaScript</a>
+        
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+</nav>
+    </aside>
+  
+  <main class="Page-main">
+    <article class="Article container-fluid">
       <header class="Article-header">
         
   
-    <h1 class="Article-title">项目</h1>
+    <h1 class="Article-title">HTML &amp; CSS 风格指南</h1>
   
   
 
 
       </header>
-      <div class="Article-content col-md-9">
-  <h2><a href="/projects/organik/">Organik</a></h2>
-  <p>有机🍃前端。</p>
-
-  <h2><a href="/projects/buds/">Buds</a></h2>
-  <p>遵循 SUIT CSS 命名规范（BEM 的变体）的 CSS 框架。</p>
-
-  <h2><a href="/projects/handie/">Handie</a></h2>
-  <p>针对不同平台、技术栈提供尽可能一致的开发体验的前端开发框架。</p>
-
+      <div class="Article-content col-md-9"><h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><h3 id="HTML-CSS-class"><a href="#HTML-CSS-class" class="headerlink" title="HTML&#x2F;CSS class"></a>HTML&#x2F;CSS class</h3><p>页面结构及样式中所使用的 class 用继承并扩展了「<a target="_blank" rel="noopener" href="http://getbem.com/">BEM</a>」命名法的 <a target="_blank" rel="noopener" href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md">SUIT CSS 命名方式</a>。</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><p>严格遵守「分离原则」，不在页面中编写内联样式和非配置类的内联脚本。</p>
+<h2 id="参考推荐"><a href="#参考推荐" class="headerlink" title="参考推荐"></a>参考推荐</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/necolas/idiomatic-html">Principles of writing consistent, idiomatic HTML</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/necolas/idiomatic-css">Principles of writing consistent, idiomatic CSS</a></li>
+<li><a target="_blank" rel="noopener" href="https://codeguide.co/">Code Guide</a></li>
+</ul>
 
 </div>
       <footer class="Article-footer col-md-3">
@@ -248,50 +347,9 @@ var _hmt = _hmt || [];
 
 
 </footer>
-      
-      
-        <!-- 评论区 -->
-        <div class="Article-comments col-md-9">
-  
-    
-
-
-  
-  
-  <div id="disqus_thread"></div>
-  
-    <script>
-      var disqus_config = function () {
-        this.page.link = 'https://example.io/projects/';
-        this.page.identifier = "/projects/";
-        this.page.title = '项目';
-      };
-
-      (function() {
-        var d = document, s = d.createElement('script');
-
-        s.src = '//anti-chaos.disqus.com/embed.js';
-
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a target="_blank" href="https://disqus.com/?ref_noscript" rel="external nofollow noopener">comments powered by Disqus.</a></noscript>
-    <script id="dsq-count-scr" src="//anti-chaos.disqus.com/count.js" async></script>
-  
-
-
-  
-
-</div>
-      
     </article>
-    
-
-  </div>
-</main>
-<footer class="Page-footer Footer">
-  <div class="container">
+    <footer class="Page-footer Footer">
+  <div class="container-fluid">
     
     <div class="Footer-description">
       
@@ -317,6 +375,8 @@ var _hmt = _hmt || [];
   </div>
 </footer>
 
+  </main>
+</div>
 
 
 
@@ -328,6 +388,16 @@ var _hmt = _hmt || [];
 <script src="/javascripts/ksio/components/page.js"></script>
 
 <script src="/javascripts/ksio/components/toc.js"></script>
+
+<script src="/javascripts/ksio/vendors/jquery.timeago.js"></script>
+
+<script src="/javascripts/ksio/vendors/jquery.timeago.zh-CN.js"></script>
+
+<script src="/javascripts/ksio/initializers/time.js"></script>
+
+<script src="/javascripts/ksio/vendors/jquery.lazyload.js"></script>
+
+<script src="/javascripts/ksio/initializers/lazyload.js"></script>
 
   </body>
 </html>

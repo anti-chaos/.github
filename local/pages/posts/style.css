@@ -1,0 +1,52 @@
+.Post {
+  padding-bottom: 24px;
+  *zoom: 1; }
+  .Post:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .Post-banner {
+    float: right;
+    width: 180px;
+    height: 101.25px;
+    margin-left: 16px;
+    border-radius: 6px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #f0f0f0; }
+  .Post-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 24px !important;
+    line-height: 1.3;
+    border-bottom: none !important; }
+    .Post-title a {
+      color: inherit;
+      text-decoration: none; }
+      .Post-title a:hover {
+        color: #0871ab; }
+      .Post-title a:focus {
+        color: #23527c; }
+  .Post-body {
+    margin: 16px 0; }
+    .Post-body p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      margin-bottom: 0;
+      line-height: inherit; }
+  .Post-footer {
+    font-size: 14px; }
+  .Post-author {
+    margin-right: 1.5em;
+    font-weight: 400; }
+  .Post-date {
+    color: #a6a6a6; }
+    .Post-date .fa {
+      margin-right: .5em; }
+  .Post + .Post {
+    padding-top: 24px;
+    border-top: 1px solid #eee; }

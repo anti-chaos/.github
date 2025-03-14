@@ -35,10 +35,10 @@
 
 
 
-  <title>项目 - 反混沌</title>
+  <title>代码风格 - 反混沌</title>
 
 
-  <meta property="og:title" content="项目">
+  <meta property="og:title" content="代码风格">
 
 
 
@@ -68,6 +68,12 @@
     
 <link rel="stylesheet" href="/stylesheets/ksio/vendors/share.css">
 
+<link rel="stylesheet" href="/local/syntax-highlighting.css">
+
+<link rel="stylesheet" href="/local/pages/post.css">
+
+<link rel="stylesheet" href="/local/pages/doc.css">
+
     
   
     
@@ -93,14 +99,12 @@ var _hmt = _hmt || [];
   </head>
   
   
-    
-  
-  <body class="Page has-headerImage" itemscope itemtype="http://schema.org/WebPage">
+  <body class="Page" itemscope itemtype="http://schema.org/WebPage">
     
 
   <header class="Page-header">
   <div class="navbar navbar-static-top">
-    <div class="container">
+    <div class="container-fluid">
       <div class="navbar-header">
         
           <button class="navbar-toggle collapsed" type="button" data-target=".Page-navs" data-toggle="collapse">
@@ -194,39 +198,143 @@ var _hmt = _hmt || [];
   </div>
 </header>
 
-<main class="Page-content">
+<div class="Page-content">
   
-  <!-- 页面横幅 -->
-  <div class="Page-banner hidden-xs" style="background-image: url('/images/local/banners/boxes.jpg');">
-    <figure class="sr-only">
-      <img src="/images/local/banners/boxes.jpg" alt="">
-      <figcaption></figcaption>
-    </figure>
-  </div>
+  
+    <aside class="Page-aside">
+      <div class="AsideBrand">
 
 
-  <!-- 内容主体 -->
-  <div class="container">
-    <article class="Page-main Article">
+  <a href="/">Anti-chaos</a>
+
+</div>
+      <nav class="AsideNav"><ul>
+  
+  
+    
+  
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        
+          <a href="/guides/">介绍</a>
+        
+      
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        <span>团队协作</span>
+        <ul>
+  
+  
+    
+  
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        <span>代码风格</span>
+        <ul>
+  
+  
+    
+  
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        
+          <a href="/guides/coding-style/">总则</a>
+        
+      
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        
+          <a href="/guides/html-and-css-coding-style/">HTML &amp; CSS</a>
+        
+      
+    </li>
+  
+    <li>
+      
+      
+      
+      
+      
+      
+        
+          <a href="/guides/javascript-coding-style/">JavaScript</a>
+        
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+</nav>
+    </aside>
+  
+  <main class="Page-main">
+    <article class="Article container-fluid">
       <header class="Article-header">
         
   
-    <h1 class="Article-title">项目</h1>
+    <h1 class="Article-title">代码风格</h1>
   
   
 
 
       </header>
-      <div class="Article-content col-md-9">
-  <h2><a href="/projects/organik/">Organik</a></h2>
-  <p>有机🍃前端。</p>
-
-  <h2><a href="/projects/buds/">Buds</a></h2>
-  <p>遵循 SUIT CSS 命名规范（BEM 的变体）的 CSS 框架。</p>
-
-  <h2><a href="/projects/handie/">Handie</a></h2>
-  <p>针对不同平台、技术栈提供尽可能一致的开发体验的前端开发框架。</p>
-
+      <div class="Article-content col-md-9"><p>风格一致的代码，看起来像是一个人写的。</p>
+<h2 id="总则"><a href="#总则" class="headerlink" title="总则"></a>总则</h2><h3 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h3><p>总的来说，在开发中任何与「命名」相关的事情都会基于「驼峰式（camel case）」和「肉串式（kebab case）」来命名。</p>
+<h4 id="目录-文件"><a href="#目录-文件" class="headerlink" title="目录 &amp; 文件"></a>目录 &amp; 文件</h4><p>组件相关的 JS 和 SCSS 文件使用大驼峰式命名，如：<code>ComponentName.js</code>、<code>ComponentName.scss</code>。</p>
+<p>目录及与组件无关的文件用肉串式命名，如：<code>directory-name</code>、<code>file-name.js</code>、<code>file-name.jpg</code> 等。</p>
+<h4 id="全局-VS-业务"><a href="#全局-VS-业务" class="headerlink" title="全局 VS 业务"></a>全局 VS 业务</h4><p>开发时所涉及的组件和模型都分为全局的和业务级的，如果命名很随意，不仅会造成认知上的困扰，还会增加应用的不稳定性。</p>
+<p>全局的组件或模型在命名时尽可能简洁、达意，能用一个单词就不要用两个；业务级的则必须加上带有业务场景的词汇，用两个及以上的单词命名。</p>
+<h2 id="细则"><a href="#细则" class="headerlink" title="细则"></a>细则</h2><p>各语言的具体请见：</p>
+<ul>
+<li><a href="/guides/html-and-css-coding-style/">HTML &amp; CSS 风格指南</a></li>
+<li><a href="/guides/javascript-coding-style/">JavaScript 风格指南</a></li>
+</ul>
+<p>某个视图层库&#x2F;框架相关的请看：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://angular.io/guide/styleguide">Angular</a></li>
+<li><a target="_blank" rel="noopener" href="https://vuejs.org/v2/style-guide/">Vue</a></li>
+</ul>
 
 </div>
       <footer class="Article-footer col-md-3">
@@ -248,50 +356,9 @@ var _hmt = _hmt || [];
 
 
 </footer>
-      
-      
-        <!-- 评论区 -->
-        <div class="Article-comments col-md-9">
-  
-    
-
-
-  
-  
-  <div id="disqus_thread"></div>
-  
-    <script>
-      var disqus_config = function () {
-        this.page.link = 'https://example.io/projects/';
-        this.page.identifier = "/projects/";
-        this.page.title = '项目';
-      };
-
-      (function() {
-        var d = document, s = d.createElement('script');
-
-        s.src = '//anti-chaos.disqus.com/embed.js';
-
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a target="_blank" href="https://disqus.com/?ref_noscript" rel="external nofollow noopener">comments powered by Disqus.</a></noscript>
-    <script id="dsq-count-scr" src="//anti-chaos.disqus.com/count.js" async></script>
-  
-
-
-  
-
-</div>
-      
     </article>
-    
-
-  </div>
-</main>
-<footer class="Page-footer Footer">
-  <div class="container">
+    <footer class="Page-footer Footer">
+  <div class="container-fluid">
     
     <div class="Footer-description">
       
@@ -317,6 +384,8 @@ var _hmt = _hmt || [];
   </div>
 </footer>
 
+  </main>
+</div>
 
 
 
@@ -328,6 +397,16 @@ var _hmt = _hmt || [];
 <script src="/javascripts/ksio/components/page.js"></script>
 
 <script src="/javascripts/ksio/components/toc.js"></script>
+
+<script src="/javascripts/ksio/vendors/jquery.timeago.js"></script>
+
+<script src="/javascripts/ksio/vendors/jquery.timeago.zh-CN.js"></script>
+
+<script src="/javascripts/ksio/initializers/time.js"></script>
+
+<script src="/javascripts/ksio/vendors/jquery.lazyload.js"></script>
+
+<script src="/javascripts/ksio/initializers/lazyload.js"></script>
 
   </body>
 </html>

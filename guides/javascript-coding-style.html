@@ -35,10 +35,10 @@
 
 
 
-  <title>了解「反混沌」 - 反混沌</title>
+  <title>JavaScript 风格指南 - 反混沌</title>
 
 
-  <meta property="og:title" content="了解「反混沌」">
+  <meta property="og:title" content="JavaScript 风格指南">
 
 
 
@@ -313,26 +313,51 @@ var _hmt = _hmt || [];
       <header class="Article-header">
         
   
-    <h1 class="Article-title">了解「反混沌」</h1>
+    <h1 class="Article-title">JavaScript 风格指南</h1>
   
   
 
 
       </header>
-      <div class="Article-content col-md-9"><p>「反混沌」，英文是「Anti-chaos」，简称为「NTKS」，是一种思想，是一个计划，是一个组织，也是一个社区。它的宗旨很明确——让前端开发更加有序，让业务开发专注业务。</p>
-<p>我们所要反的「混沌」，它是无序、模糊不清的一种状态，会导致混乱，从而使工作变得困难。</p>
-<p>不知你有没有遇到过下面几种问题——</p>
-<ol>
-<li>在与别人协作时，没有一个统一的规范、协议，实际是同一个东西却表现出了不同的形态，让人困惑；</li>
-<li>就算制定了规范，约定了协议，但执行时又出现问题，要么是干脆不遵守，要么是记不住，就连自己也有时会犯错；</li>
-<li>要实现一个较为复杂的功能，虽然已经有相关的开源项目，但就因为它的扩展性问题，有几个点无法很好地满足需求，致使不得不自己造个轮子；</li>
-<li>前端库&#x2F;框架更迭太快，正在维护的应用太庞大了，核心逻辑与视图层过于耦合，想升级下技术太难了，简直是伤筋动骨；</li>
-<li>团队里用了不止一个技术栈，它们的使用方式天差地别，如果被安排去做一个跑在之前没用过的技术栈之上的系统的需求，不仅要花时间理解业务，还要去了解那个技术栈的玩法，切换技术栈成本有点高；</li>
-<li>公司开辟新业务，需要做个新系统，但前端很多东西是可以复用的，可实际在复用时要改很多东西，改到怀疑人生；</li>
-<li>……</li>
-</ol>
-<p>引起这些问题的共同因素之一，就是「混沌」！</p>
-<p>「反混沌」会在设计、协作等方面提供一些<a href="/guides/">指导</a>，也会从工程、开发等角度提供一些<a href="/projects/">工具</a>，进而消除「混沌」。</p>
+      <div class="Article-content col-md-9"><h2 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h2><p>根据不同场景，会用到小驼峰式（lowerCamelCase）、大驼峰式（UpperCamelCase）和大蛇式（UPPER_SNAKE_CASE）。</p>
+<p>在使用<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Fluent_interface">流式接口</a>进行 API 设计时，可以不受方法命名规则限制。</p>
+<h3 id="细则"><a href="#细则" class="headerlink" title="细则"></a>细则</h3><p>1、变量名&#x2F;属性名、函数名&#x2F;方法名、参数名使用小驼峰式。</p>
+<p>2、构造函数名、类名使用大驼峰式。</p>
+<p>3、常量名使用大蛇式。</p>
+<p>4、使用英文单词命名，不可使用拼音、汉字等，不可使用「简写」。</p>
+<p>5、即使是全大写的专有名词，也要严格遵从驼峰式命名规则。</p>
+<p>6、用词需要简洁、达意。</p>
+<p>7、非全局、通用场景时需要加上准确描述业务场景的词汇。</p>
+<p>8、布尔型变量使用形容词、动词的现在分词和过去分词。</p>
+<p>9、返回值是布尔型的函数&#x2F;方法，使用「is-」或「has-」开头，后面可接名词、形容词及动词的现在分词和过去分词。表达「是&#x2F;否」时前面用「is-」，表达「有&#x2F;无」时前面用「has-」。</p>
+<p>10、返回值是视图结构的函数&#x2F;方法，使用「render-」开头的动宾结构。</p>
+<p>11、返回值是其他类型的函数&#x2F;方法，使用「get-」、「find-」等具有「获取&#x2F;获得」语义的单词开头的动宾结构。</p>
+<p>如果函数&#x2F;方法内部的逻辑很简单，推荐使用「get-」，否则最好使用「find-」。</p>
+<p>12、对事件进行处理的函数&#x2F;方法，使用「handle-」或「on-」开头。</p>
+<p>13、其他无返回值的函数&#x2F;非生命周期方法，使用具有相关功能语义的动宾结构或动补结构。</p>
+<p>14、生命周期方法使用动词的原型或过去分词。</p>
+<h2 id="范式"><a href="#范式" class="headerlink" title="范式"></a>范式</h2><p>不限制使用一种编程范式，可以同时使用面向对象、函数式、响应式等，但要遵守相应编程范式的一些原则。</p>
+<h3 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h3><p>1、在使用面向对象编程时，必须要基于类，不可直接基于原型。</p>
+<h3 id="函数式"><a href="#函数式" class="headerlink" title="函数式"></a>函数式</h3><p>1、参数不可变，不允许直接修改入参。</p>
+<p>不允许对入参重新赋值。如果入参是个对象，同时不允许对其属性进行重新赋值。</p>
+<p>2、返回值必须为一个新值。</p>
+<h3 id="响应式"><a href="#响应式" class="headerlink" title="响应式"></a>响应式</h3><h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><p>TBD</p>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>TBD</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h3><p>开发时使用 TypeScript，因此要重视类型及类成员的访问控制。</p>
+<p>1、变量&#x2F;属性定义、函数&#x2F;方法定义、函数&#x2F;方法参数、函数&#x2F;方法返回值都需要标明类型。</p>
+<p>2、禁止使用 <code>any</code>。</p>
+<p>3、有 <code>return</code> 关键字的函数&#x2F;方法被视为有返回值，如果直接 <code>return;</code>，则返回值类型是 <code>undefined</code>。</p>
+<p>4、无返回值的函数&#x2F;方法，即没有 <code>return</code> 关键字的，返回值类型为 <code>void。</code></p>
+<p>5、异步函数&#x2F;方法的返回值为 <code>Promise&lt;T&gt;</code>。</p>
+<p>6、类成员必须标明访问控制符。</p>
+<p>7、可被外部访问的类成员使用 <code>public</code> 访问控制符。</p>
+<p>8、可被派生类访问的类成员使用 <code>protected</code> 访问控制符。</p>
+<p>9、仅能被实例访问的类成员使用 <code>private</code> 访问控制符。</p>
+<p>10、标为 <code>readonly</code> 的类属性只能被赋值一次，即初始化。</p>
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><p>1、与最终显示无直接关系的变量或常量，不作为组件的状态存在。</p>
+<h3 id="无构建"><a href="#无构建" class="headerlink" title="无构建"></a>无构建</h3><p>有的场景不能使用构建工具，例如：在后台管理系统的页面主要是由后端工程师开发的情况，使用前端构建工具会增加他们的开发成本，大多数情况是选择 jQuery 作为基础库，所以不能用 ES6+ 语法。</p>
+<p>每个 JS 文件的代码应该这样组织：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 所有代码都包裹在一个立即执行函数里面</span><br><span class="hljs-comment">// 目的是避免环境污染</span><br>(<span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-comment">// 开启严格模式</span><br>  <span class="hljs-comment">// 为了规范代码使用</span><br>  <span class="hljs-string">&#x27;use strict&#x27;</span>;<br><br>  <span class="hljs-comment">// 页面内函数间共用的变量提前定义</span><br>  <span class="hljs-keyword">var</span> foo = <span class="hljs-string">&#x27;&#x27;</span>;<br>  <span class="hljs-keyword">var</span> bar = <span class="hljs-number">0</span>;<br><br>  <span class="hljs-keyword">function</span> <span class="hljs-title function_">initForm</span>(<span class="hljs-params"></span>) &#123;&#125;<br><br>  <span class="hljs-keyword">function</span> <span class="hljs-title function_">initList</span>(<span class="hljs-params"></span>) &#123;&#125;<br><br>  $(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">ready</span>(<span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-comment">// `$(document).ready()` 里面只执行定义好的初始化类的函数</span><br>    <span class="hljs-title function_">initForm</span>();<br>    <span class="hljs-title function_">initList</span>();<br>  &#125;);<br>&#125;)();<br></code></pre></td></tr></table></figure>
 
 </div>
       <footer class="Article-footer col-md-3">
