@@ -3,6 +3,10 @@ const { pick } = require('@ntks/toolbox');
 
 const ksUtils = require('./knosys');
 
+function getDataSourceRoot() {
+  return resolvePath(ksUtils.resolveRootPath(), './data');
+}
+
 function resolveSiteSrcDir(site) {
   return ksUtils.getConfig(`site.${site}.source`) || `./.knosys/sites/${site}`;
 }
@@ -16,7 +20,7 @@ function getSiteRoot() {
 }
 
 function getLocalDataRoot() {
-  return `${getSiteRoot()}/source/_data/knosys`;
+  return `${getSiteRoot()}/source/_data/local`;
 }
 
 function getLocalDocRoot() {
@@ -31,6 +35,7 @@ function copySitePkgInfo(site) {
 
 module.exports = {
   ...ksUtils,
+  getDataSourceRoot,
   resolveSiteSrcDir, resolveSiteSrcPath,
   getLocalDataRoot, getLocalDocRoot,
   copySitePkgInfo,

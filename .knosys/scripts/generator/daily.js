@@ -1,10 +1,10 @@
-const { getLocalRoot, getDataRoot, scanAndSortByAsc, readDirDeeply, readData, saveData, mkdir, ensureDirExists, resolvePathFromParams, readEntity } = require('../helper');
+const { resolveRootPath, getDataSourceRoot, getLocalDataRoot, scanAndSortByAsc, readDirDeeply, readData, saveData, mkdir, ensureDirExists, resolvePathFromParams, readEntity } = require('../helper');
 
 const feedFormat = /^\d{2}\.(\d{2})\s\-\s《\[([^\[\]]+)?\]\(([^\(\)]+)\)》：(.+)$/;
 
 function convertMarkdownToYaml() {
-  const localDataRoot = getDataRoot();
-  const sourceDir = `${getLocalRoot()}/daily`
+  const localDataRoot = getDataSourceRoot();
+  const sourceDir = `${resolveRootPath()}/daily`
   const paramPath = 'year';
 
   readDirDeeply(sourceDir, paramPath.split('/'), {}, (_, params) => {
@@ -29,12 +29,11 @@ function convertMarkdownToYaml() {
 }
 
 function generateFromYaml() {
-  const localDataRoot = getDataRoot();
-  const dataSourceDir = `${localDataRoot}/dailies`
+  const dataSourceDir = `${getDataSourceRoot()}/dailies`
   const paramPath = 'year/month/day';
-  const siteDataDir = `${getLocalRoot()}/site/_data`;
+  const siteDataDir = getLocalDataRoot();
   const siteData = { items: {} };
-  const mdDir = `${getLocalRoot()}/daily`;
+  const mdDir = `${resolveRootPath()}/daily`;
   const mdData = {};
 
   readDirDeeply(dataSourceDir, paramPath.split('/'), {}, (_, params) => {
