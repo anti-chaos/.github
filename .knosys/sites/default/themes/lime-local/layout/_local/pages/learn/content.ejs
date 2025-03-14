@@ -1,0 +1,8 @@
+<h2><a href="/guides/">指南</a></h2>
+<% site.data['local/guides'].forEach(type => { %>
+  <h3><%= type.title %></h3>
+  <% type.items.forEach(item => { %>
+    <h4><a href="/guides/<%= item.id %>/"><%= item.title %></a></h4>
+    <% if (item.description) { %><p><%= item.description %></p><% } %>
+  <% }) %>
+<% }) %>

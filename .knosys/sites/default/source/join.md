@@ -1,9 +1,9 @@
 ---
 title: 加入我们
 banner:
-  url: local/images/anti-chaos.jpg
+  url: images/local/banners/anti-chaos.jpg
   description: Anti-chaos
-image: local/images/anti-chaos.jpg
+image: images/local/banners/anti-chaos.jpg
 ---
 
 ## 我们是谁？
