@@ -1,0 +1,17 @@
+cookbook:
+  name: 食用手册
+  collection: guides
+  toc:
+    - text: 介绍
+      collection: pages
+      slug: guides
+    - text: 团队协作
+      items:
+        - text: 代码风格
+          items:
+            - text: 总则
+              slug: coding-style
+            - text: HTML & CSS
+              slug: html-and-css-coding-style
+            - text: JavaScript
+              slug: javascript-coding-style

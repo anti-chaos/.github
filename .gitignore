@@ -15,7 +15,7 @@ yarn.lock
 _site/
 
 # Hexo sites
-/.knosys/sites/*/source/_data/knosys/
+# /.knosys/sites/*/source/_data/knosys/
 /.knosys/sites/*/source/knosys/
 /.knosys/sites/*/source/_posts/*
 !/.knosys/sites/*/source/_posts/hello-world.md
