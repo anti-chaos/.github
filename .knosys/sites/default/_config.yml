@@ -169,14 +169,14 @@ ksio:
       _local/layouts/index:
         values:
           ksio_asset_css:
-            - local/pages/index/style
+            - stylesheets/local/pages/index
     page:
       - scope:
           path: ""
           type: posts
         values:
           ksio_asset_css:
-            - local/pages/post
+            - stylesheets/local/pages/post
           ksio_asset_js:
             - javascripts/ksio/vendors/jquery.timeago
             - javascripts/ksio/vendors/jquery.timeago.zh-CN
@@ -189,9 +189,9 @@ ksio:
         values:
           layout: ksio/doc
           ksio_asset_css:
-            - local/syntax-highlighting
-            - local/pages/post
-            - local/pages/doc
+            - stylesheets/local/syntax-highlighting
+            - stylesheets/local/pages/post
+            - stylesheets/local/pages/doc
           ksio_asset_js:
             - javascripts/ksio/vendors/jquery.timeago
             - javascripts/ksio/vendors/jquery.timeago.zh-CN
