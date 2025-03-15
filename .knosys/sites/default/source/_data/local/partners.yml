@@ -1,0 +1,5 @@
+- name: OpenBuild
+  description: 为 OpenBuild 官网及其他 OpenBuild 生态项目提供稳定可靠的技术支撑。
+  slug: openbuild
+  website: https://openbuild.xyz
+  banner: openbuild.jpg
