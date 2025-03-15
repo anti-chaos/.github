@@ -1,0 +1,8 @@
+- title: Petals
+  description: 为基于组件的前端开发而生的控件（UI 组件）体系，提供一些标准化 API 的半成品原子控件。
+  url: https://petals-ui.github.io/
+  banner: petals.jpg
+- title: Handie
+  description: 模型驱动、领域驱动、配置驱动、渐进式的企业级中后台前端应用开发框架。
+  url: https://handiejs.github.io/
+  banner: handie.jpg
